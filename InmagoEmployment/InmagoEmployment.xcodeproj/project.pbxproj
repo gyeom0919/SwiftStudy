@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D49781328AA2258001BA100 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D49781228AA2257001BA100 /* DetailViewController.swift */; };
 		8D939B4628A79E800098990A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D939B4528A79E800098990A /* AppDelegate.swift */; };
 		8D939B4828A79E800098990A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D939B4728A79E800098990A /* SceneDelegate.swift */; };
 		8D939B4D28A79E800098990A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D939B4B28A79E800098990A /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D49781228AA2257001BA100 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		8D939B4228A79E800098990A /* InmagoEmployment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InmagoEmployment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D939B4528A79E800098990A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D939B4728A79E800098990A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				8D939B4528A79E800098990A /* AppDelegate.swift */,
 				8D939B4728A79E800098990A /* SceneDelegate.swift */,
 				8D939B7528A79FD20098990A /* EmployViewController.swift */,
+				8D49781228AA2257001BA100 /* DetailViewController.swift */,
 				8D939B4B28A79E800098990A /* Main.storyboard */,
 				8D939B4E28A79E810098990A /* Assets.xcassets */,
 				8D939B5028A79E810098990A /* LaunchScreen.storyboard */,
@@ -261,6 +264,7 @@
 				8D939B7628A79FD30098990A /* EmployViewController.swift in Sources */,
 				8D939B4628A79E800098990A /* AppDelegate.swift in Sources */,
 				8D939B4828A79E800098990A /* SceneDelegate.swift in Sources */,
+				8D49781328AA2258001BA100 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

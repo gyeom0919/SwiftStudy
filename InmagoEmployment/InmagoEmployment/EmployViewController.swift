@@ -43,6 +43,8 @@ class EmployViewController: UIViewController, UITableViewDelegate, UITableViewDa
     //  Delegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("\(indexPath.row) 번째 셀 입니다.")
+        
+        performSegue(withIdentifier: "showDetail", sender: nil)
     }
 
 

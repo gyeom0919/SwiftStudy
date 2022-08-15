@@ -70,11 +70,80 @@
                     </view>
                     <connections>
                         <outlet property="myTableView" destination="gNM-nk-bgf" id="bCU-2l-2zn"/>
+                        <segue destination="4Yk-Z4-ny6" kind="presentation" identifier="showDetail" id="boG-8z-zeL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="4XU-Vo-3mO">
+            <objects>
+                <viewController id="4Yk-Z4-ny6" customClass="DetailViewController" customModule="InmagoEmployment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xro-ED-hbz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3yP-34-hyM">
+                                <rect key="frame" x="192" y="445" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5J-B9-Ceg">
+                                <rect key="frame" x="147" y="479" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="LeP-BA-yig"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="120" id="U9w-Nk-RsX"/>
+                                    <constraint firstAttribute="height" constant="80" id="Y1X-yh-7m7"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="120" id="aSl-gq-6ew"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="klS-LL-qUr"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="rgo-SE-a2w"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="희망직종 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P8F-hg-ibw">
+                                <rect key="frame" x="49" y="616" width="68" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="68" id="6Rh-kK-06e"/>
+                                    <constraint firstAttribute="height" constant="21" id="CbG-BI-ykr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Job" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Egh-zQ-yff">
+                                <rect key="frame" x="183" y="613" width="62" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="6c9-Is-GPO"/>
+                                    <constraint firstAttribute="width" constant="62" id="bLH-rY-z4g"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="D2w-d1-ZUr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="H5J-B9-Ceg" firstAttribute="leading" secondItem="D2w-d1-ZUr" secondAttribute="leading" constant="147" id="AmO-Kc-XDX"/>
+                            <constraint firstItem="D2w-d1-ZUr" firstAttribute="trailing" secondItem="H5J-B9-Ceg" secondAttribute="trailing" constant="147" id="EYa-56-MV0"/>
+                            <constraint firstItem="H5J-B9-Ceg" firstAttribute="centerX" secondItem="xro-ED-hbz" secondAttribute="centerX" id="gG1-cw-B0x"/>
+                            <constraint firstItem="Egh-zQ-yff" firstAttribute="top" secondItem="H5J-B9-Ceg" secondAttribute="bottom" constant="14" id="gua-IU-cnC"/>
+                            <constraint firstItem="H5J-B9-Ceg" firstAttribute="top" secondItem="3yP-34-hyM" secondAttribute="bottom" constant="13" id="qtR-WQ-PaQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="jobLabel" destination="Egh-zQ-yff" id="rah-Ok-Ndf"/>
+                        <outlet property="nameLabel" destination="H5J-B9-Ceg" id="dLw-QN-tOQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Pz-6U-Scf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1166.6666666666667" y="93.75"/>
         </scene>
     </scenes>
     <resources>
