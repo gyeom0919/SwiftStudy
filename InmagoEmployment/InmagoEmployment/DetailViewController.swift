@@ -30,5 +30,4 @@ class DetailViewController: UIViewController {
         print("화면이 열렸습니다.")
     }
     
-
 }
