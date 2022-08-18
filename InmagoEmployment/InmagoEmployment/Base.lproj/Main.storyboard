@@ -82,7 +82,6 @@
         <!--Detail View Controller-->
         <scene sceneID="4XU-Vo-3mO">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1Pz-6U-Scf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="4Yk-Z4-ny6" customClass="DetailViewController" customModule="InmagoEmployment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xro-ED-hbz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
@@ -104,32 +103,49 @@
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="maX-mQ-fBw">
-                                <rect key="frame" x="327" y="44" width="67" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Ok-5e-FE7">
-                                <rect key="frame" x="20" y="107" width="374" height="460"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Ok-5e-FE7">
+                                <rect key="frame" x="32" y="117" width="350" height="450"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="450" id="MCb-tF-a0q"/>
+                                    <constraint firstAttribute="width" constant="350" id="u26-kR-W6d"/>
+                                </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="maX-mQ-fBw">
+                                <rect key="frame" x="304" y="64" width="100" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="QzV-eg-1oB"/>
+                                    <constraint firstAttribute="height" constant="44" id="h0f-4c-nx2"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Done" buttonSize="medium">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="25"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="closeView" destination="4Yk-Z4-ny6" eventType="touchUpInside" id="3Dd-tt-It4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="D2w-d1-ZUr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="maX-mQ-fBw" firstAttribute="top" secondItem="D2w-d1-ZUr" secondAttribute="top" constant="20" id="5Sz-cs-knG"/>
                             <constraint firstItem="Egh-zQ-yff" firstAttribute="top" secondItem="H5J-B9-Ceg" secondAttribute="bottom" constant="52" id="6JB-sc-ur2"/>
                             <constraint firstItem="H5J-B9-Ceg" firstAttribute="centerX" secondItem="xro-ED-hbz" secondAttribute="centerX" id="AeH-Uo-FWO"/>
+                            <constraint firstItem="H5J-B9-Ceg" firstAttribute="top" secondItem="2Ok-5e-FE7" secondAttribute="bottom" constant="25" id="HzI-VO-Tiq"/>
+                            <constraint firstItem="D2w-d1-ZUr" firstAttribute="trailing" secondItem="maX-mQ-fBw" secondAttribute="trailing" constant="10" id="SPj-nc-3gj"/>
+                            <constraint firstItem="2Ok-5e-FE7" firstAttribute="centerX" secondItem="xro-ED-hbz" secondAttribute="centerX" id="a3e-yk-xnC"/>
                             <constraint firstItem="Egh-zQ-yff" firstAttribute="centerX" secondItem="xro-ED-hbz" secondAttribute="centerX" id="jc5-FV-RRJ"/>
                             <constraint firstItem="H5J-B9-Ceg" firstAttribute="top" secondItem="D2w-d1-ZUr" secondAttribute="top" constant="548" id="vUV-ri-rwa"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="doneButton" destination="maX-mQ-fBw" id="tlE-pa-7ux"/>
                         <outlet property="jobLabel" destination="Egh-zQ-yff" id="rah-Ok-Ndf"/>
                         <outlet property="nameLabel" destination="H5J-B9-Ceg" id="dLw-QN-tOQ"/>
                         <outlet property="profilePhoto" destination="2Ok-5e-FE7" id="etX-FK-VU2"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Pz-6U-Scf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1166.6666666666667" y="93.75"/>
         </scene>

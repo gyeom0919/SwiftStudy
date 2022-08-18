@@ -17,7 +17,15 @@ class EmployViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     // segue 수행하는 것에 대해 준비하는 메소드
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        <#code#>
+        // performSegue 전에 데이터 넘기기 -> DetailViewController
+        if segue.identifier == "showDetail" {
+            // segue의 도착지를 DetailViewController로
+            let vc = segue.destination as? DetailViewController
+            if let index = sender as? Int {
+                vc?.name = nameList[index]
+                vc?.job = jobList[index]
+            }
+        }
     }
     
     override func viewDidLoad() {
@@ -48,7 +56,7 @@ class EmployViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     //  Delegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("\(indexPath.row) 번째 셀 입니다.")
+        print("\(indexPath.row + 1)번째 셀 입니다.")
         
         //segue 수행
         // showDetail Segue를 수행하게 되면 indexPath.row를 DetailViewController로 전송한다
