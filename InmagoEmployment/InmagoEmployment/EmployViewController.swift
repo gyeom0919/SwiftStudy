@@ -15,12 +15,17 @@ class EmployViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     @IBOutlet var myTableView: UITableView!
     
+    // segue 수행하는 것에 대해 준비하는 메소드
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        <#code#>
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         myTableView.delegate = self
         myTableView.dataSource = self
-        // Do any additional setup after loading the view.
+        
     }
     
     //Datasource
@@ -33,7 +38,8 @@ class EmployViewController: UIViewController, UITableViewDelegate, UITableViewDa
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ListCell else{
             return UITableViewCell()
         }
-        
+        let img = UIImage(named: "\(nameList[indexPath.row]).jpg")
+        cell.profilePhoto.image = img
         cell.nameLabel.text = nameList[indexPath.row]
         cell.jobLabel.text = jobList[indexPath.row]
         
@@ -44,7 +50,9 @@ class EmployViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("\(indexPath.row) 번째 셀 입니다.")
         
-        performSegue(withIdentifier: "showDetail", sender: nil)
+        //segue 수행
+        // showDetail Segue를 수행하게 되면 indexPath.row를 DetailViewController로 전송한다
+        performSegue(withIdentifier: "showDetail", sender: indexPath.row)
     }
 
 
@@ -53,4 +61,5 @@ class EmployViewController: UIViewController, UITableViewDelegate, UITableViewDa
 class ListCell: UITableViewCell {
     @IBOutlet weak var nameLabel:UILabel!
     @IBOutlet weak var jobLabel:UILabel!
+    @IBOutlet weak var profilePhoto:UIImageView!
 }

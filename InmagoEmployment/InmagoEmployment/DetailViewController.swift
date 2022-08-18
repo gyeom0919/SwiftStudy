@@ -11,6 +11,8 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var nameLabel:UILabel!
     @IBOutlet weak var jobLabel:UILabel!
+    @IBOutlet weak var profilePhoto:UIImageView!
+    
     
     var name : String?
     var job : String?
