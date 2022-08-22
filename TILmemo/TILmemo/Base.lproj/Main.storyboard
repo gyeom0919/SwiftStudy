@@ -3,6 +3,7 @@
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -128,12 +129,63 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="TIL 목록" id="mT8-ql-BAl">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="aPe-3G-Kb2"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="aPe-3G-Kb2">
+                            <connections>
+                                <segue destination="HNo-BG-JZp" kind="show" id="BXC-gf-sfk"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OX7-GS-OOF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="124.6376811594203" y="-63.616071428571423"/>
+        </scene>
+        <!--메모 작성-->
+        <scene sceneID="opy-IN-c22">
+            <objects>
+                <viewController id="HNo-BG-JZp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dvm-J2-6ya">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MuW-2Y-bmQ">
+                                <rect key="frame" x="16" y="108" width="382" height="250"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="i3v-cZ-lGh"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aEv-qx-64E">
+                                <rect key="frame" x="16" y="373" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="4g5-5K-Obo"/>
+                                    <constraint firstAttribute="height" constant="250" id="JRr-Nk-xGS"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hlt-Vb-ioc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MuW-2Y-bmQ" firstAttribute="leading" secondItem="hlt-Vb-ioc" secondAttribute="leading" constant="16" id="NyV-5B-Cwe"/>
+                            <constraint firstItem="hlt-Vb-ioc" firstAttribute="trailing" secondItem="MuW-2Y-bmQ" secondAttribute="trailing" constant="16" id="QT0-n1-Isl"/>
+                            <constraint firstItem="aEv-qx-64E" firstAttribute="top" secondItem="MuW-2Y-bmQ" secondAttribute="bottom" constant="15" id="pXh-86-PWu"/>
+                            <constraint firstItem="aEv-qx-64E" firstAttribute="leading" secondItem="hlt-Vb-ioc" secondAttribute="leading" constant="16" id="qZ2-dl-4L7"/>
+                            <constraint firstItem="MuW-2Y-bmQ" firstAttribute="top" secondItem="hlt-Vb-ioc" secondAttribute="top" constant="20" id="wb4-6j-q0Q"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="메모 작성" id="OLL-ed-9kw">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="camera" id="6hQ-bg-eC7"/>
+                            <barButtonItem title="저장" id="dlv-dD-pfg"/>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="miK-NZ-2eP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1014.4927536231885" y="-64.285714285714278"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="b4b-Fc-yeO">
@@ -153,8 +205,14 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
