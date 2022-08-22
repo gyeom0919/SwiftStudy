@@ -11,6 +11,7 @@
         <!--목록-->
         <scene sceneID="RaR-iE-YVs">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bhu-Vs-pSY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController id="54m-T4-TRl" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="uFT-Ry-yUN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -146,13 +147,13 @@
                         <segue destination="k13-Ea-Rbo" kind="show" identifier="read_sg" id="vhR-No-CnU"/>
                     </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Bhu-Vs-pSY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-17.39130434782609" y="156.69642857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oCP-XJ-Fpg">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ryb-PL-CPp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="l3h-0K-2fc" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eXs-uc-J0P">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -162,7 +163,6 @@
                         <segue destination="54m-T4-TRl" kind="relationship" relationship="rootViewController" id="955-9x-Rdi"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ryb-PL-CPp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-949" y="157"/>
         </scene>
