@@ -9,8 +9,13 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+    
+    var memolist = [MemoData]() // 메모 데이터를 저장하는 배열 변수
+    
+        // AppDelegate에 memolist 배열을 저장한 이유 : 여러 객체가 사용하고 참조하는 공유 데이터이기에 생명주기가 짧은 뷰컨트롤러보단 AppDelegate가 적합하다.
+    // + 하지만 앱이 종료되면 초기화된다.
+    
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
