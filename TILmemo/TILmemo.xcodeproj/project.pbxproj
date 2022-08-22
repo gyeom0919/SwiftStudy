@@ -1,0 +1,603 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8D92982528B38A91000DCD8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D92982428B38A91000DCD8C /* AppDelegate.swift */; };
+		8D92982728B38A91000DCD8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D92982628B38A91000DCD8C /* SceneDelegate.swift */; };
+		8D92982C28B38A91000DCD8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D92982A28B38A91000DCD8C /* Main.storyboard */; };
+		8D92982E28B38A92000DCD8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D92982D28B38A92000DCD8C /* Assets.xcassets */; };
+		8D92983128B38A92000DCD8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D92982F28B38A92000DCD8C /* LaunchScreen.storyboard */; };
+		8D92983C28B38A92000DCD8C /* TILmemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D92983B28B38A92000DCD8C /* TILmemoTests.swift */; };
+		8D92984628B38A92000DCD8C /* TILmemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D92984528B38A92000DCD8C /* TILmemoUITests.swift */; };
+		8D92984828B38A92000DCD8C /* TILmemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D92984728B38A92000DCD8C /* TILmemoUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8D92983828B38A92000DCD8C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8D92981928B38A91000DCD8C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D92982028B38A91000DCD8C;
+			remoteInfo = TILmemo;
+		};
+		8D92984228B38A92000DCD8C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8D92981928B38A91000DCD8C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D92982028B38A91000DCD8C;
+			remoteInfo = TILmemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8D92982128B38A91000DCD8C /* TILmemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TILmemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D92982428B38A91000DCD8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8D92982628B38A91000DCD8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8D92982B28B38A91000DCD8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8D92982D28B38A92000DCD8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8D92983028B38A92000DCD8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8D92983228B38A92000DCD8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D92983728B38A92000DCD8C /* TILmemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TILmemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D92983B28B38A92000DCD8C /* TILmemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TILmemoTests.swift; sourceTree = "<group>"; };
+		8D92984128B38A92000DCD8C /* TILmemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TILmemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D92984528B38A92000DCD8C /* TILmemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TILmemoUITests.swift; sourceTree = "<group>"; };
+		8D92984728B38A92000DCD8C /* TILmemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TILmemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D92981E28B38A91000DCD8C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D92983428B38A92000DCD8C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D92983E28B38A92000DCD8C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8D92981828B38A91000DCD8C = {
+			isa = PBXGroup;
+			children = (
+				8D92982328B38A91000DCD8C /* TILmemo */,
+				8D92983A28B38A92000DCD8C /* TILmemoTests */,
+				8D92984428B38A92000DCD8C /* TILmemoUITests */,
+				8D92982228B38A91000DCD8C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8D92982228B38A91000DCD8C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D92982128B38A91000DCD8C /* TILmemo.app */,
+				8D92983728B38A92000DCD8C /* TILmemoTests.xctest */,
+				8D92984128B38A92000DCD8C /* TILmemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8D92982328B38A91000DCD8C /* TILmemo */ = {
+			isa = PBXGroup;
+			children = (
+				8D92982428B38A91000DCD8C /* AppDelegate.swift */,
+				8D92982628B38A91000DCD8C /* SceneDelegate.swift */,
+				8D92982A28B38A91000DCD8C /* Main.storyboard */,
+				8D92982D28B38A92000DCD8C /* Assets.xcassets */,
+				8D92982F28B38A92000DCD8C /* LaunchScreen.storyboard */,
+				8D92983228B38A92000DCD8C /* Info.plist */,
+			);
+			path = TILmemo;
+			sourceTree = "<group>";
+		};
+		8D92983A28B38A92000DCD8C /* TILmemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				8D92983B28B38A92000DCD8C /* TILmemoTests.swift */,
+			);
+			path = TILmemoTests;
+			sourceTree = "<group>";
+		};
+		8D92984428B38A92000DCD8C /* TILmemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8D92984528B38A92000DCD8C /* TILmemoUITests.swift */,
+				8D92984728B38A92000DCD8C /* TILmemoUITestsLaunchTests.swift */,
+			);
+			path = TILmemoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D92982028B38A91000DCD8C /* TILmemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D92984B28B38A92000DCD8C /* Build configuration list for PBXNativeTarget "TILmemo" */;
+			buildPhases = (
+				8D92981D28B38A91000DCD8C /* Sources */,
+				8D92981E28B38A91000DCD8C /* Frameworks */,
+				8D92981F28B38A91000DCD8C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TILmemo;
+			productName = TILmemo;
+			productReference = 8D92982128B38A91000DCD8C /* TILmemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8D92983628B38A92000DCD8C /* TILmemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D92984E28B38A92000DCD8C /* Build configuration list for PBXNativeTarget "TILmemoTests" */;
+			buildPhases = (
+				8D92983328B38A92000DCD8C /* Sources */,
+				8D92983428B38A92000DCD8C /* Frameworks */,
+				8D92983528B38A92000DCD8C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8D92983928B38A92000DCD8C /* PBXTargetDependency */,
+			);
+			name = TILmemoTests;
+			productName = TILmemoTests;
+			productReference = 8D92983728B38A92000DCD8C /* TILmemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8D92984028B38A92000DCD8C /* TILmemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D92985128B38A92000DCD8C /* Build configuration list for PBXNativeTarget "TILmemoUITests" */;
+			buildPhases = (
+				8D92983D28B38A92000DCD8C /* Sources */,
+				8D92983E28B38A92000DCD8C /* Frameworks */,
+				8D92983F28B38A92000DCD8C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8D92984328B38A92000DCD8C /* PBXTargetDependency */,
+			);
+			name = TILmemoUITests;
+			productName = TILmemoUITests;
+			productReference = 8D92984128B38A92000DCD8C /* TILmemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8D92981928B38A91000DCD8C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					8D92982028B38A91000DCD8C = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					8D92983628B38A92000DCD8C = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 8D92982028B38A91000DCD8C;
+					};
+					8D92984028B38A92000DCD8C = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 8D92982028B38A91000DCD8C;
+					};
+				};
+			};
+			buildConfigurationList = 8D92981C28B38A91000DCD8C /* Build configuration list for PBXProject "TILmemo" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8D92981828B38A91000DCD8C;
+			productRefGroup = 8D92982228B38A91000DCD8C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D92982028B38A91000DCD8C /* TILmemo */,
+				8D92983628B38A92000DCD8C /* TILmemoTests */,
+				8D92984028B38A92000DCD8C /* TILmemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D92981F28B38A91000DCD8C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D92983128B38A92000DCD8C /* LaunchScreen.storyboard in Resources */,
+				8D92982E28B38A92000DCD8C /* Assets.xcassets in Resources */,
+				8D92982C28B38A91000DCD8C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D92983528B38A92000DCD8C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D92983F28B38A92000DCD8C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D92981D28B38A91000DCD8C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D92982528B38A91000DCD8C /* AppDelegate.swift in Sources */,
+				8D92982728B38A91000DCD8C /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D92983328B38A92000DCD8C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D92983C28B38A92000DCD8C /* TILmemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D92983D28B38A92000DCD8C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D92984828B38A92000DCD8C /* TILmemoUITestsLaunchTests.swift in Sources */,
+				8D92984628B38A92000DCD8C /* TILmemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8D92983928B38A92000DCD8C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D92982028B38A91000DCD8C /* TILmemo */;
+			targetProxy = 8D92983828B38A92000DCD8C /* PBXContainerItemProxy */;
+		};
+		8D92984328B38A92000DCD8C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D92982028B38A91000DCD8C /* TILmemo */;
+			targetProxy = 8D92984228B38A92000DCD8C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8D92982A28B38A91000DCD8C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8D92982B28B38A91000DCD8C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8D92982F28B38A92000DCD8C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8D92983028B38A92000DCD8C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8D92984928B38A92000DCD8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8D92984A28B38A92000DCD8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8D92984C28B38A92000DCD8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 79KM28R566;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TILmemo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = SwiftStudy.TILmemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8D92984D28B38A92000DCD8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 79KM28R566;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TILmemo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = SwiftStudy.TILmemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8D92984F28B38A92000DCD8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 79KM28R566;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = SwiftStudy.TILmemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TILmemo.app/TILmemo";
+			};
+			name = Debug;
+		};
+		8D92985028B38A92000DCD8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 79KM28R566;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = SwiftStudy.TILmemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TILmemo.app/TILmemo";
+			};
+			name = Release;
+		};
+		8D92985228B38A92000DCD8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 79KM28R566;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = SwiftStudy.TILmemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TILmemo;
+			};
+			name = Debug;
+		};
+		8D92985328B38A92000DCD8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 79KM28R566;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = SwiftStudy.TILmemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TILmemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8D92981C28B38A91000DCD8C /* Build configuration list for PBXProject "TILmemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D92984928B38A92000DCD8C /* Debug */,
+				8D92984A28B38A92000DCD8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D92984B28B38A92000DCD8C /* Build configuration list for PBXNativeTarget "TILmemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D92984C28B38A92000DCD8C /* Debug */,
+				8D92984D28B38A92000DCD8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D92984E28B38A92000DCD8C /* Build configuration list for PBXNativeTarget "TILmemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D92984F28B38A92000DCD8C /* Debug */,
+				8D92985028B38A92000DCD8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D92985128B38A92000DCD8C /* Build configuration list for PBXNativeTarget "TILmemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D92985228B38A92000DCD8C /* Debug */,
+				8D92985328B38A92000DCD8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8D92981928B38A91000DCD8C /* Project object */;
+}
