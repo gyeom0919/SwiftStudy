@@ -11,13 +11,13 @@
         <!--TIL 목록-->
         <scene sceneID="EL6-Xa-tcB">
             <objects>
-                <tableViewController id="tYI-9V-gX7" sceneMemberID="viewController">
+                <tableViewController title="TIL 목록" id="tYI-9V-gX7" customClass="MemoListTableViewController" customModule="TILmemo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="m34-a5-wUw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="Dwr-qc-xJt">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="Dwr-qc-xJt" customClass="TILCell">
                                 <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dwr-qc-xJt" id="ZVQ-dT-ZPz">
@@ -65,7 +65,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="Y1g-al-680">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="Y1g-al-680" customClass="TILCell">
                                 <rect key="frame" x="0.0" y="124.66666603088379" width="414" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Y1g-al-680" id="c45-91-jfm">
@@ -135,15 +135,68 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="PYJ-Ho-eQn" kind="show" id="79f-dK-fft"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OX7-GS-OOF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="124.6376811594203" y="-63.616071428571423"/>
         </scene>
-        <!--메모 작성-->
+        <!--상세화면-->
+        <scene sceneID="VdJ-Of-I3k">
+            <objects>
+                <viewController title="상세화면" id="PYJ-Ho-eQn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="smk-3m-O5l">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wnF-zL-8zH">
+                                <rect key="frame" x="16" y="104" width="382" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="4g0-UA-G7g"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내용" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TLS-JR-KLV">
+                                <rect key="frame" x="16" y="145" width="382" height="15.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1j0-xU-44j">
+                                <rect key="frame" x="16" y="180.66666666666663" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" placeholder="YES" id="L0Y-MV-CoD"/>
+                                    <constraint firstAttribute="width" constant="250" id="qMJ-hE-dzO"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oKs-9d-hFQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1j0-xU-44j" firstAttribute="leading" secondItem="oKs-9d-hFQ" secondAttribute="leading" constant="16" id="3gp-DY-tIK"/>
+                            <constraint firstItem="wnF-zL-8zH" firstAttribute="leading" secondItem="oKs-9d-hFQ" secondAttribute="leading" constant="16" id="53U-xv-Yc5"/>
+                            <constraint firstItem="TLS-JR-KLV" firstAttribute="leading" secondItem="oKs-9d-hFQ" secondAttribute="leading" constant="16" id="BI1-Vf-Vb9"/>
+                            <constraint firstItem="wnF-zL-8zH" firstAttribute="top" secondItem="oKs-9d-hFQ" secondAttribute="top" constant="16" id="ESv-cD-hV0"/>
+                            <constraint firstItem="oKs-9d-hFQ" firstAttribute="trailing" secondItem="wnF-zL-8zH" secondAttribute="trailing" constant="16" id="HKY-BM-My4"/>
+                            <constraint firstItem="oKs-9d-hFQ" firstAttribute="trailing" secondItem="TLS-JR-KLV" secondAttribute="trailing" constant="16" id="NtX-3Y-KG7"/>
+                            <constraint firstItem="1j0-xU-44j" firstAttribute="top" secondItem="TLS-JR-KLV" secondAttribute="bottom" constant="20" id="goA-sr-KEB"/>
+                            <constraint firstItem="TLS-JR-KLV" firstAttribute="top" secondItem="wnF-zL-8zH" secondAttribute="bottom" constant="20" id="kfd-kM-Ujl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="hso-Xv-a0m"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oOM-Nb-skd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="124.6376811594203" y="628.125"/>
+        </scene>
+        <!--TIL 작성-->
         <scene sceneID="opy-IN-c22">
             <objects>
-                <viewController id="HNo-BG-JZp" sceneMemberID="viewController">
+                <viewController title="TIL 작성" id="HNo-BG-JZp" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dvm-J2-6ya">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

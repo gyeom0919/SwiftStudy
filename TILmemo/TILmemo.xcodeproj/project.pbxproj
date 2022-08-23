@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D6BBEFB28B4F0FA0062A473 /* MemoListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BBEFA28B4F0FA0062A473 /* MemoListTableViewController.swift */; };
+		8D6BBEFD28B4F17A0062A473 /* MemoReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BBEFC28B4F17A0062A473 /* MemoReadViewController.swift */; };
+		8D6BBEFF28B4F1820062A473 /* MemoWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BBEFE28B4F1820062A473 /* MemoWriteViewController.swift */; };
+		8D6BBF0328B4F2640062A473 /* MemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BBF0228B4F2640062A473 /* MemoData.swift */; };
 		8D92982528B38A91000DCD8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D92982428B38A91000DCD8C /* AppDelegate.swift */; };
 		8D92982728B38A91000DCD8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D92982628B38A91000DCD8C /* SceneDelegate.swift */; };
 		8D92982C28B38A91000DCD8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D92982A28B38A91000DCD8C /* Main.storyboard */; };
@@ -35,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D6BBEFA28B4F0FA0062A473 /* MemoListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListTableViewController.swift; sourceTree = "<group>"; };
+		8D6BBEFC28B4F17A0062A473 /* MemoReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoReadViewController.swift; sourceTree = "<group>"; };
+		8D6BBEFE28B4F1820062A473 /* MemoWriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoWriteViewController.swift; sourceTree = "<group>"; };
+		8D6BBF0228B4F2640062A473 /* MemoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoData.swift; sourceTree = "<group>"; };
 		8D92982128B38A91000DCD8C /* TILmemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TILmemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D92982428B38A91000DCD8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D92982628B38A91000DCD8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,7 +107,11 @@
 			children = (
 				8D92982428B38A91000DCD8C /* AppDelegate.swift */,
 				8D92982628B38A91000DCD8C /* SceneDelegate.swift */,
+				8D6BBEFA28B4F0FA0062A473 /* MemoListTableViewController.swift */,
 				8D92982A28B38A91000DCD8C /* Main.storyboard */,
+				8D6BBEFC28B4F17A0062A473 /* MemoReadViewController.swift */,
+				8D6BBEFE28B4F1820062A473 /* MemoWriteViewController.swift */,
+				8D6BBF0228B4F2640062A473 /* MemoData.swift */,
 				8D92982D28B38A92000DCD8C /* Assets.xcassets */,
 				8D92982F28B38A92000DCD8C /* LaunchScreen.storyboard */,
 				8D92983228B38A92000DCD8C /* Info.plist */,
@@ -255,8 +267,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D6BBEFD28B4F17A0062A473 /* MemoReadViewController.swift in Sources */,
+				8D6BBEFF28B4F1820062A473 /* MemoWriteViewController.swift in Sources */,
 				8D92982528B38A91000DCD8C /* AppDelegate.swift in Sources */,
+				8D6BBF0328B4F2640062A473 /* MemoData.swift in Sources */,
 				8D92982728B38A91000DCD8C /* SceneDelegate.swift in Sources */,
+				8D6BBEFB28B4F0FA0062A473 /* MemoListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
