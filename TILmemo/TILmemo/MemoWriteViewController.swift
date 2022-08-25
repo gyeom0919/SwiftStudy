@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MemoWriteViewController: UIViewController {
+class MemoWriteViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,15 +15,20 @@ class MemoWriteViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func pickPhoto(_ sender: Any) {
+        let imagePick = UIImagePickerController()
+        
+        imagePick.delegate = self
+        imagePick.allowsEditing = true
+        
+        self.present(imagePick, animated: true)
     }
-    */
-
+    
+    @IBAction func saveMemo(_ sender: Any) {
+    }
+    
+    
+    @IBOutlet weak var contents: UITextView!
+    @IBOutlet weak var preview : UIImageView!
 }

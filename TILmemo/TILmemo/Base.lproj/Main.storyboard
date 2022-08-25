@@ -146,7 +146,7 @@
         <!--상세화면-->
         <scene sceneID="VdJ-Of-I3k">
             <objects>
-                <viewController title="상세화면" id="PYJ-Ho-eQn" sceneMemberID="viewController">
+                <viewController title="상세화면" id="PYJ-Ho-eQn" customClass="MemoReadViewController" customModule="TILmemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="smk-3m-O5l">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -196,7 +196,7 @@
         <!--TIL 작성-->
         <scene sceneID="opy-IN-c22">
             <objects>
-                <viewController title="TIL 작성" id="HNo-BG-JZp" sceneMemberID="viewController">
+                <viewController title="TIL 작성" id="HNo-BG-JZp" customClass="MemoWriteViewController" customModule="TILmemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dvm-J2-6ya">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -231,8 +231,16 @@
                     </view>
                     <navigationItem key="navigationItem" title="메모 작성" id="OLL-ed-9kw">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="camera" id="6hQ-bg-eC7"/>
-                            <barButtonItem title="저장" id="dlv-dD-pfg"/>
+                            <barButtonItem systemItem="camera" id="6hQ-bg-eC7">
+                                <connections>
+                                    <action selector="pickPhoto:" destination="HNo-BG-JZp" id="gxX-6a-b5u"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="저장" id="dlv-dD-pfg">
+                                <connections>
+                                    <action selector="saveMemo:" destination="HNo-BG-JZp" id="zbI-Ux-LbA"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                 </viewController>
