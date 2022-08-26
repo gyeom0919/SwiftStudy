@@ -233,16 +233,20 @@
                         <rightBarButtonItems>
                             <barButtonItem systemItem="camera" id="6hQ-bg-eC7">
                                 <connections>
-                                    <action selector="pickPhoto:" destination="HNo-BG-JZp" id="gxX-6a-b5u"/>
+                                    <action selector="pickPhoto:" destination="HNo-BG-JZp" id="393-GZ-A0a"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="저장" id="dlv-dD-pfg">
                                 <connections>
-                                    <action selector="saveMemo:" destination="HNo-BG-JZp" id="zbI-Ux-LbA"/>
+                                    <action selector="saveMemo:" destination="HNo-BG-JZp" id="jfz-22-X7A"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="contents" destination="MuW-2Y-bmQ" id="pvC-Ag-cdF"/>
+                        <outlet property="preview" destination="aEv-qx-64E" id="PkU-4q-YJC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="miK-NZ-2eP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
