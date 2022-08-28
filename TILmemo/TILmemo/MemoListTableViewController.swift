@@ -26,5 +26,16 @@ class MemoListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 0
     }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // 배열 데이터에 주어진 행에 맞는 데이터 꺼내기
+        let row = self.appDelegate.memoList[indexPath.row]
+        
+        // 이미지 여부 결정하는 것
+        let cellId = row.image == nil ? "memoCell" : "memoCellWithImage"
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId) as! TILCell
+        
+    }
 
 }
