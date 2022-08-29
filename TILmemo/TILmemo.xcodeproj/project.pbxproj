@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D2629E028BC987600845A58 /* memoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2629DF28BC987600845A58 /* memoCell.swift */; };
 		8D6BBEFB28B4F0FA0062A473 /* MemoListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BBEFA28B4F0FA0062A473 /* MemoListTableViewController.swift */; };
 		8D6BBEFD28B4F17A0062A473 /* MemoReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BBEFC28B4F17A0062A473 /* MemoReadViewController.swift */; };
 		8D6BBEFF28B4F1820062A473 /* MemoWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BBEFE28B4F1820062A473 /* MemoWriteViewController.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D2629DF28BC987600845A58 /* memoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memoCell.swift; sourceTree = "<group>"; };
 		8D6BBEFA28B4F0FA0062A473 /* MemoListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListTableViewController.swift; sourceTree = "<group>"; };
 		8D6BBEFC28B4F17A0062A473 /* MemoReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoReadViewController.swift; sourceTree = "<group>"; };
 		8D6BBEFE28B4F1820062A473 /* MemoWriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoWriteViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				8D92982428B38A91000DCD8C /* AppDelegate.swift */,
 				8D92982628B38A91000DCD8C /* SceneDelegate.swift */,
 				8D6BBEFA28B4F0FA0062A473 /* MemoListTableViewController.swift */,
+				8D2629DF28BC987600845A58 /* memoCell.swift */,
 				8D92982A28B38A91000DCD8C /* Main.storyboard */,
 				8D6BBEFC28B4F17A0062A473 /* MemoReadViewController.swift */,
 				8D6BBEFE28B4F1820062A473 /* MemoWriteViewController.swift */,
@@ -268,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D6BBEFD28B4F17A0062A473 /* MemoReadViewController.swift in Sources */,
+				8D2629E028BC987600845A58 /* memoCell.swift in Sources */,
 				8D6BBEFF28B4F1820062A473 /* MemoWriteViewController.swift in Sources */,
 				8D92982528B38A91000DCD8C /* AppDelegate.swift in Sources */,
 				8D6BBF0328B4F2640062A473 /* MemoData.swift in Sources */,
