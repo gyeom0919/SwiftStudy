@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8D2629E028BC987600845A58 /* memoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2629DF28BC987600845A58 /* memoCell.swift */; };
+		8D55CABB28BF22FA00099283 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D55CABA28BF22FA00099283 /* CustomCell.swift */; };
 		8D6BBEFB28B4F0FA0062A473 /* MemoListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BBEFA28B4F0FA0062A473 /* MemoListTableViewController.swift */; };
 		8D6BBEFD28B4F17A0062A473 /* MemoReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BBEFC28B4F17A0062A473 /* MemoReadViewController.swift */; };
 		8D6BBEFF28B4F1820062A473 /* MemoWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6BBEFE28B4F1820062A473 /* MemoWriteViewController.swift */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		8D2629DF28BC987600845A58 /* memoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memoCell.swift; sourceTree = "<group>"; };
+		8D55CABA28BF22FA00099283 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		8D6BBEFA28B4F0FA0062A473 /* MemoListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListTableViewController.swift; sourceTree = "<group>"; };
 		8D6BBEFC28B4F17A0062A473 /* MemoReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoReadViewController.swift; sourceTree = "<group>"; };
 		8D6BBEFE28B4F1820062A473 /* MemoWriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoWriteViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 		8D92981828B38A91000DCD8C = {
 			isa = PBXGroup;
 			children = (
+				8D55CABA28BF22FA00099283 /* CustomCell.swift */,
 				8D92982328B38A91000DCD8C /* TILmemo */,
 				8D92983A28B38A92000DCD8C /* TILmemoTests */,
 				8D92984428B38A92000DCD8C /* TILmemoUITests */,
@@ -276,6 +279,7 @@
 				8D92982528B38A91000DCD8C /* AppDelegate.swift in Sources */,
 				8D6BBF0328B4F2640062A473 /* MemoData.swift in Sources */,
 				8D92982728B38A91000DCD8C /* SceneDelegate.swift in Sources */,
+				8D55CABB28BF22FA00099283 /* CustomCell.swift in Sources */,
 				8D6BBEFB28B4F0FA0062A473 /* MemoListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

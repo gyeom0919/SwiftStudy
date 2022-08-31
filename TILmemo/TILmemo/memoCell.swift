@@ -7,7 +7,7 @@
 
 import UIKit
 
-class memoCell: UITableViewCell {
+class memoCell : UITableViewCell {
     
     @IBOutlet weak var subject : UILabel!
     @IBOutlet weak var contents : UILabel!

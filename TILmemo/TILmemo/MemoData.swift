@@ -5,7 +5,6 @@
 //  Created by 겸 on 2022/08/23.
 //
 
-import Foundation
 import UIKit
 
 /* 사용자가 입력한 값을 저장하는 파일

@@ -20,14 +20,14 @@
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="memoCell" rowHeight="80" id="Dwr-qc-xJt" customClass="memoCell" customModule="TILmemo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dwr-qc-xJt" id="ZVQ-dT-ZPz" customClass="memoCell" customModule="TILmemo" customModuleProvider="target">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dwr-qc-xJt" id="ZVQ-dT-ZPz">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="411-uL-mvx">
                                             <rect key="frame" x="20" y="11" width="304" height="21"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="f18-kd-hHP"/>
+                                                <constraint firstAttribute="height" constant="21" id="Ncs-NI-lGV"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                             <nil key="textColor"/>
@@ -45,7 +45,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022-08-22 19:15:00" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqS-m4-UmK">
                                             <rect key="frame" x="329" y="21" width="65" height="38"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="65" id="5dH-eV-jA9"/>
+                                                <constraint firstAttribute="width" constant="65" id="87B-zn-Dg5"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                             <nil key="textColor"/>
@@ -53,27 +53,27 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="411-uL-mvx" firstAttribute="leading" secondItem="ZVQ-dT-ZPz" secondAttribute="leadingMargin" id="217-9m-Tr2"/>
-                                        <constraint firstItem="bn1-JV-iCy" firstAttribute="top" secondItem="411-uL-mvx" secondAttribute="bottom" constant="5" id="3nt-o0-bRS"/>
-                                        <constraint firstItem="rqS-m4-UmK" firstAttribute="top" secondItem="ZVQ-dT-ZPz" secondAttribute="topMargin" constant="10" id="56w-iF-Iie"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="411-uL-mvx" secondAttribute="trailing" constant="70" id="9Kk-8h-Xoo"/>
-                                        <constraint firstItem="rqS-m4-UmK" firstAttribute="trailing" secondItem="ZVQ-dT-ZPz" secondAttribute="trailingMargin" id="FGl-kO-EWa"/>
-                                        <constraint firstItem="411-uL-mvx" firstAttribute="top" secondItem="ZVQ-dT-ZPz" secondAttribute="topMargin" id="HVl-S5-2Pn"/>
-                                        <constraint firstItem="bn1-JV-iCy" firstAttribute="leading" secondItem="ZVQ-dT-ZPz" secondAttribute="leadingMargin" id="LkG-Ti-IwX"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="bn1-JV-iCy" secondAttribute="trailing" constant="70" id="fCW-uy-MKi"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="rqS-m4-UmK" secondAttribute="bottom" constant="10" id="nbo-AJ-pjG"/>
+                                        <constraint firstItem="rqS-m4-UmK" firstAttribute="top" secondItem="ZVQ-dT-ZPz" secondAttribute="topMargin" constant="10" id="1x1-6m-3O0"/>
+                                        <constraint firstItem="bn1-JV-iCy" firstAttribute="leading" secondItem="ZVQ-dT-ZPz" secondAttribute="leadingMargin" id="9J9-fP-svm"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="bn1-JV-iCy" secondAttribute="trailing" constant="70" id="AZa-xy-qgz"/>
+                                        <constraint firstItem="rqS-m4-UmK" firstAttribute="trailing" secondItem="ZVQ-dT-ZPz" secondAttribute="trailingMargin" id="Kin-F4-nFe"/>
+                                        <constraint firstItem="bn1-JV-iCy" firstAttribute="top" secondItem="411-uL-mvx" secondAttribute="bottom" constant="5" id="Sbf-eD-ivX"/>
+                                        <constraint firstItem="411-uL-mvx" firstAttribute="leading" secondItem="ZVQ-dT-ZPz" secondAttribute="leadingMargin" id="gdP-Ev-rdL"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="rqS-m4-UmK" secondAttribute="bottom" constant="10" id="iUK-he-3f2"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="411-uL-mvx" secondAttribute="trailing" constant="70" id="p55-uh-VKb"/>
+                                        <constraint firstItem="411-uL-mvx" firstAttribute="top" secondItem="ZVQ-dT-ZPz" secondAttribute="topMargin" id="y0A-S6-Bxk"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="contents" destination="bn1-JV-iCy" id="xhE-YP-ZMe"/>
-                                    <outlet property="subject" destination="411-uL-mvx" id="gFU-UT-gcl"/>
-                                    <outlet property="tilDate" destination="rqS-m4-UmK" id="FSk-IW-qEC"/>
+                                    <outlet property="contents" destination="bn1-JV-iCy" id="qhb-mG-1xX"/>
+                                    <outlet property="subject" destination="411-uL-mvx" id="FkK-Fk-dd4"/>
+                                    <outlet property="tilDate" destination="rqS-m4-UmK" id="mbF-hW-uen"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="memoCellWithImage" rowHeight="80" id="Y1g-al-680" customClass="memoCell" customModule="TILmemo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="124.66666603088379" width="414" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Y1g-al-680" id="c45-91-jfm" customClass="memoCell" customModule="TILmemo" customModuleProvider="target">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Y1g-al-680" id="c45-91-jfm">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -103,6 +103,7 @@
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022-08-22 19:15:00" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PMP-JO-zs8">
                                             <rect key="frame" x="329" y="10" width="65" height="60"/>
+                                            <accessibility key="accessibilityConfiguration" label="날짜"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="65" id="pBV-Cf-m4E"/>
                                             </constraints>
@@ -126,6 +127,12 @@
                                         <constraint firstItem="ASD-AV-V7R" firstAttribute="leading" secondItem="Veu-u4-7WA" secondAttribute="trailing" constant="10" id="z8b-qC-niL"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="contents" destination="ASD-AV-V7R" id="hWj-Ba-1ko"/>
+                                    <outlet property="img" destination="Veu-u4-7WA" id="Mil-yN-MlK"/>
+                                    <outlet property="subject" destination="5qT-sa-pu2" id="k6E-in-nM8"/>
+                                    <outlet property="tilDate" destination="PMP-JO-zs8" id="tbs-xC-tBA"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -179,15 +186,15 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="oKs-9d-hFQ"/>
+                        <viewLayoutGuide key="safeArea" id="cmZ-4f-vnl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="1j0-xU-44j" firstAttribute="leading" secondItem="oKs-9d-hFQ" secondAttribute="leading" constant="16" id="3gp-DY-tIK"/>
-                            <constraint firstItem="wnF-zL-8zH" firstAttribute="leading" secondItem="oKs-9d-hFQ" secondAttribute="leading" constant="16" id="53U-xv-Yc5"/>
-                            <constraint firstItem="TLS-JR-KLV" firstAttribute="leading" secondItem="oKs-9d-hFQ" secondAttribute="leading" constant="16" id="BI1-Vf-Vb9"/>
-                            <constraint firstItem="wnF-zL-8zH" firstAttribute="top" secondItem="oKs-9d-hFQ" secondAttribute="top" constant="16" id="ESv-cD-hV0"/>
-                            <constraint firstItem="oKs-9d-hFQ" firstAttribute="trailing" secondItem="wnF-zL-8zH" secondAttribute="trailing" constant="16" id="HKY-BM-My4"/>
-                            <constraint firstItem="oKs-9d-hFQ" firstAttribute="trailing" secondItem="TLS-JR-KLV" secondAttribute="trailing" constant="16" id="NtX-3Y-KG7"/>
+                            <constraint firstItem="1j0-xU-44j" firstAttribute="leading" secondItem="cmZ-4f-vnl" secondAttribute="leading" constant="16" id="3gp-DY-tIK"/>
+                            <constraint firstItem="wnF-zL-8zH" firstAttribute="leading" secondItem="cmZ-4f-vnl" secondAttribute="leading" constant="16" id="53U-xv-Yc5"/>
+                            <constraint firstItem="TLS-JR-KLV" firstAttribute="leading" secondItem="cmZ-4f-vnl" secondAttribute="leading" constant="16" id="BI1-Vf-Vb9"/>
+                            <constraint firstItem="wnF-zL-8zH" firstAttribute="top" secondItem="cmZ-4f-vnl" secondAttribute="top" constant="16" id="ESv-cD-hV0"/>
+                            <constraint firstItem="cmZ-4f-vnl" firstAttribute="trailing" secondItem="wnF-zL-8zH" secondAttribute="trailing" constant="16" id="HKY-BM-My4"/>
+                            <constraint firstItem="cmZ-4f-vnl" firstAttribute="trailing" secondItem="TLS-JR-KLV" secondAttribute="trailing" constant="16" id="NtX-3Y-KG7"/>
                             <constraint firstItem="1j0-xU-44j" firstAttribute="top" secondItem="TLS-JR-KLV" secondAttribute="bottom" constant="20" id="goA-sr-KEB"/>
                             <constraint firstItem="TLS-JR-KLV" firstAttribute="top" secondItem="wnF-zL-8zH" secondAttribute="bottom" constant="20" id="kfd-kM-Ujl"/>
                         </constraints>
@@ -224,26 +231,26 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="hlt-Vb-ioc"/>
+                        <viewLayoutGuide key="safeArea" id="bkn-vK-B5l"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="MuW-2Y-bmQ" firstAttribute="leading" secondItem="hlt-Vb-ioc" secondAttribute="leading" constant="16" id="NyV-5B-Cwe"/>
-                            <constraint firstItem="hlt-Vb-ioc" firstAttribute="trailing" secondItem="MuW-2Y-bmQ" secondAttribute="trailing" constant="16" id="QT0-n1-Isl"/>
+                            <constraint firstItem="MuW-2Y-bmQ" firstAttribute="leading" secondItem="bkn-vK-B5l" secondAttribute="leading" constant="16" id="NyV-5B-Cwe"/>
+                            <constraint firstItem="bkn-vK-B5l" firstAttribute="trailing" secondItem="MuW-2Y-bmQ" secondAttribute="trailing" constant="16" id="QT0-n1-Isl"/>
                             <constraint firstItem="aEv-qx-64E" firstAttribute="top" secondItem="MuW-2Y-bmQ" secondAttribute="bottom" constant="15" id="pXh-86-PWu"/>
-                            <constraint firstItem="aEv-qx-64E" firstAttribute="leading" secondItem="hlt-Vb-ioc" secondAttribute="leading" constant="16" id="qZ2-dl-4L7"/>
-                            <constraint firstItem="MuW-2Y-bmQ" firstAttribute="top" secondItem="hlt-Vb-ioc" secondAttribute="top" constant="20" id="wb4-6j-q0Q"/>
+                            <constraint firstItem="aEv-qx-64E" firstAttribute="leading" secondItem="bkn-vK-B5l" secondAttribute="leading" constant="16" id="qZ2-dl-4L7"/>
+                            <constraint firstItem="MuW-2Y-bmQ" firstAttribute="top" secondItem="bkn-vK-B5l" secondAttribute="top" constant="20" id="wb4-6j-q0Q"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="메모 작성" id="OLL-ed-9kw">
                         <rightBarButtonItems>
                             <barButtonItem systemItem="camera" id="6hQ-bg-eC7">
                                 <connections>
-                                    <action selector="pickPhoto:" destination="HNo-BG-JZp" id="393-GZ-A0a"/>
+                                    <action selector="pickPhoto:" destination="HNo-BG-JZp" id="chY-bv-pfh"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="저장" id="dlv-dD-pfg">
                                 <connections>
-                                    <action selector="saveMemo:" destination="HNo-BG-JZp" id="jfz-22-X7A"/>
+                                    <action selector="saveMemo:" destination="HNo-BG-JZp" id="C1I-8F-xZD"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>

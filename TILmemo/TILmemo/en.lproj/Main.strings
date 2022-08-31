@@ -1,0 +1,48 @@
+
+/* Class = "UILabel"; text = "제목"; ObjectID = "411-uL-mvx"; */
+"411-uL-mvx.text" = "제목";
+
+/* Class = "UILabel"; text = "제목"; ObjectID = "5qT-sa-pu2"; */
+"5qT-sa-pu2.text" = "제목";
+
+/* Class = "UILabel"; text = "내용"; ObjectID = "ASD-AV-V7R"; */
+"ASD-AV-V7R.text" = "내용";
+
+/* Class = "UIViewController"; title = "TIL 작성"; ObjectID = "HNo-BG-JZp"; */
+"HNo-BG-JZp.title" = "TIL 작성";
+
+/* Class = "UINavigationItem"; title = "메모 작성"; ObjectID = "OLL-ed-9kw"; */
+"OLL-ed-9kw.title" = "메모 작성";
+
+/* Class = "UILabel"; accessibilityLabel = "날짜"; ObjectID = "PMP-JO-zs8"; */
+"PMP-JO-zs8.accessibilityLabel" = "날짜";
+
+/* Class = "UILabel"; text = "2022-08-22 19:15:00"; ObjectID = "PMP-JO-zs8"; */
+"PMP-JO-zs8.text" = "2022-08-22 19:15:00";
+
+/* Class = "UIViewController"; title = "상세화면"; ObjectID = "PYJ-Ho-eQn"; */
+"PYJ-Ho-eQn.title" = "상세화면";
+
+/* Class = "UILabel"; text = "내용"; ObjectID = "TLS-JR-KLV"; */
+"TLS-JR-KLV.text" = "내용";
+
+/* Class = "UILabel"; text = "내용"; ObjectID = "bn1-JV-iCy"; */
+"bn1-JV-iCy.text" = "내용";
+
+/* Class = "UIBarButtonItem"; title = "저장"; ObjectID = "dlv-dD-pfg"; */
+"dlv-dD-pfg.title" = "저장";
+
+/* Class = "UINavigationItem"; title = "Title"; ObjectID = "hso-Xv-a0m"; */
+"hso-Xv-a0m.title" = "Title";
+
+/* Class = "UINavigationItem"; title = "TIL 목록"; ObjectID = "mT8-ql-BAl"; */
+"mT8-ql-BAl.title" = "TIL 목록";
+
+/* Class = "UILabel"; text = "2022-08-22 19:15:00"; ObjectID = "rqS-m4-UmK"; */
+"rqS-m4-UmK.text" = "2022-08-22 19:15:00";
+
+/* Class = "UITableViewController"; title = "TIL 목록"; ObjectID = "tYI-9V-gX7"; */
+"tYI-9V-gX7.title" = "TIL 목록";
+
+/* Class = "UILabel"; text = "제목"; ObjectID = "wnF-zL-8zH"; */
+"wnF-zL-8zH.text" = "제목";

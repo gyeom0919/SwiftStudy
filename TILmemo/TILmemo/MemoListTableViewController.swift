@@ -14,7 +14,11 @@ class MemoListTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         // 테이블 데이터를 읽어들인다.
         self.tableView.reloadData()
+
     }
+    
+    
+    
 
 
 // Cell 갯수를 리턴하는 함수
@@ -22,7 +26,6 @@ class MemoListTableViewController: UITableViewController {
         // appDelegate 안에있는 memoList가 몇개인지 새라
         let count = self.appDelegate.memoList.count
         return count
-
     }
     
     
@@ -38,7 +41,7 @@ class MemoListTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId) as! memoCell
         
         
-        // TILCell 내용
+        // memoCell 내용
         cell.subject?.text = row.title
         cell.contents?.text = row.contents
         cell.img?.image = row.image
