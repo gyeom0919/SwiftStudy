@@ -185,18 +185,30 @@
                                     <constraint firstAttribute="width" constant="250" id="qMJ-hE-dzO"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022-08-22 19:15:00" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQk-4D-AFh">
+                                <rect key="frame" x="306" y="180.66666666666666" width="65" height="24"/>
+                                <accessibility key="accessibilityConfiguration" label="날짜"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="xpe-ea-Yg9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cmZ-4f-vnl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="1j0-xU-44j" firstAttribute="leading" secondItem="cmZ-4f-vnl" secondAttribute="leading" constant="16" id="3gp-DY-tIK"/>
                             <constraint firstItem="wnF-zL-8zH" firstAttribute="leading" secondItem="cmZ-4f-vnl" secondAttribute="leading" constant="16" id="53U-xv-Yc5"/>
+                            <constraint firstItem="tQk-4D-AFh" firstAttribute="leading" secondItem="1j0-xU-44j" secondAttribute="trailing" constant="40" id="AC4-A4-7WU"/>
                             <constraint firstItem="TLS-JR-KLV" firstAttribute="leading" secondItem="cmZ-4f-vnl" secondAttribute="leading" constant="16" id="BI1-Vf-Vb9"/>
                             <constraint firstItem="wnF-zL-8zH" firstAttribute="top" secondItem="cmZ-4f-vnl" secondAttribute="top" constant="16" id="ESv-cD-hV0"/>
                             <constraint firstItem="cmZ-4f-vnl" firstAttribute="trailing" secondItem="wnF-zL-8zH" secondAttribute="trailing" constant="16" id="HKY-BM-My4"/>
                             <constraint firstItem="cmZ-4f-vnl" firstAttribute="trailing" secondItem="TLS-JR-KLV" secondAttribute="trailing" constant="16" id="NtX-3Y-KG7"/>
                             <constraint firstItem="1j0-xU-44j" firstAttribute="top" secondItem="TLS-JR-KLV" secondAttribute="bottom" constant="20" id="goA-sr-KEB"/>
                             <constraint firstItem="TLS-JR-KLV" firstAttribute="top" secondItem="wnF-zL-8zH" secondAttribute="bottom" constant="20" id="kfd-kM-Ujl"/>
+                            <constraint firstItem="tQk-4D-AFh" firstAttribute="top" secondItem="TLS-JR-KLV" secondAttribute="bottom" constant="20" id="wFN-RE-mgt"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="hso-Xv-a0m"/>
