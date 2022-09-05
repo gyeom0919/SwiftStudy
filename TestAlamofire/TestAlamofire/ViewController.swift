@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        postSample()
     }
 
     
@@ -79,5 +81,32 @@ class ViewController: UIViewController {
     
     // MARK- POST
     
+    func postSample() {
+        let url = "https://ptsv2.com/t/zccwc-1662373612/post"
+        
+        var request = URLRequest(url: URL(string: url)!)
+        request.method = .post
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.timeoutInterval = 10
+        
+        // 보낼 정보
+        let params = ["id":"아이디" , "pw":"패스워드"] as Dictionary
+        
+        do {
+                   try request.httpBody = JSONSerialization.data(withJSONObject: params, options: [])
+               } catch {
+                   print("http Body Error")
+               }
+               AF.request(request).responseString { (response) in
+                   switch response.result {
+                   case .success:
+                       print("POST 성공")
+                   case .failure(let error):
+                       print("error : \(error.errorDescription!)")
+                   }
+               }
+           }
+        
+        
 }
 
