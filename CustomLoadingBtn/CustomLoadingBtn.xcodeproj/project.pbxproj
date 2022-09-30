@@ -20,6 +20,7 @@
 		8D778AE428E58E9400AE5F06 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D778AE328E58E9400AE5F06 /* UIView+Ext.swift */; };
 		8D778AE628E58EFE00AE5F06 /* CustomViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D778AE528E58EFE00AE5F06 /* CustomViewTest.swift */; };
 		8D778AE928E5E5EB00AE5F06 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8D778AE828E5E5EB00AE5F06 /* SnapKit */; };
+		8D778AEC28E5E67C00AE5F06 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 8D778AEB28E5E67C00AE5F06 /* Then */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D778AE928E5E5EB00AE5F06 /* SnapKit in Frameworks */,
+				8D778AEC28E5E67C00AE5F06 /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +166,7 @@
 			name = CustomLoadingBtn;
 			packageProductDependencies = (
 				8D778AE828E5E5EB00AE5F06 /* SnapKit */,
+				8D778AEB28E5E67C00AE5F06 /* Then */,
 			);
 			productName = CustomLoadingBtn;
 			productReference = 8D778AAD28E58E4100AE5F06 /* CustomLoadingBtn.app */;
@@ -239,6 +242,7 @@
 			mainGroup = 8D778AA428E58E4100AE5F06;
 			packageReferences = (
 				8D778AE728E5E5EA00AE5F06 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				8D778AEA28E5E67C00AE5F06 /* XCRemoteSwiftPackageReference "Then" */,
 			);
 			productRefGroup = 8D778AAE28E58E4100AE5F06 /* Products */;
 			projectDirPath = "";
@@ -640,6 +644,14 @@
 				kind = branch;
 			};
 		};
+		8D778AEA28E5E67C00AE5F06 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -647,6 +659,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8D778AE728E5E5EA00AE5F06 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		8D778AEB28E5E67C00AE5F06 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8D778AEA28E5E67C00AE5F06 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
