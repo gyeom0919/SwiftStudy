@@ -55,7 +55,7 @@ class ViewController: UIViewController {
     /// UI 설정
     fileprivate func setupUI() {
         self.view.addSubview(myScrollView)
-        
+         
         buttonStackView.snp.makeConstraints{
             $0.edges.equalToSuperview().inset(20) //모서리를 부모 객체에 20만큼 간격
         }
@@ -70,9 +70,11 @@ class ViewController: UIViewController {
         }
         
         let dummyButtons : [UIButton] = Array(0...20).map{ index in
-            UIButton(configuration: .filled()).then{
-                $0.setTitle("\(index) 버튼", for: .normal)
-            }
+//            UIButton(configuration: .filled()).then{
+//                $0.setTitle("\(index) 버튼", for: .normal)
+//            }
+            AllignedIconButton(title: "\(index) 버튼")
+
         }
         
         dummyButtons.forEach{ //반복문

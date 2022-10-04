@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D52418028EC16EA007CBA03 /* AllignedIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D52417F28EC16EA007CBA03 /* AllignedIconButton.swift */; };
 		8D778AB128E58E4100AE5F06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D778AB028E58E4100AE5F06 /* AppDelegate.swift */; };
 		8D778AB328E58E4100AE5F06 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D778AB228E58E4100AE5F06 /* SceneDelegate.swift */; };
 		8D778AB528E58E4100AE5F06 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D778AB428E58E4100AE5F06 /* ViewController.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D52417F28EC16EA007CBA03 /* AllignedIconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllignedIconButton.swift; sourceTree = "<group>"; };
 		8D778AAD28E58E4100AE5F06 /* CustomLoadingBtn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomLoadingBtn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D778AB028E58E4100AE5F06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D778AB228E58E4100AE5F06 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +88,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D52417E28EC16C9007CBA03 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				8D52417F28EC16EA007CBA03 /* AllignedIconButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		8D778AA428E58E4100AE5F06 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +119,7 @@
 		8D778AAF28E58E4100AE5F06 /* CustomLoadingBtn */ = {
 			isa = PBXGroup;
 			children = (
+				8D52417E28EC16C9007CBA03 /* Components */,
 				8D778AE028E58E5A00AE5F06 /* Extension */,
 				8D778AB028E58E4100AE5F06 /* AppDelegate.swift */,
 				8D778AB228E58E4100AE5F06 /* SceneDelegate.swift */,
@@ -291,6 +302,7 @@
 				8D778AB128E58E4100AE5F06 /* AppDelegate.swift in Sources */,
 				8D778AE428E58E9400AE5F06 /* UIView+Ext.swift in Sources */,
 				8D778AE228E58E7800AE5F06 /* UIViewController+Ext.swift in Sources */,
+				8D52418028EC16EA007CBA03 /* AllignedIconButton.swift in Sources */,
 				8D778AB328E58E4100AE5F06 /* SceneDelegate.swift in Sources */,
 				8D778AE628E58EFE00AE5F06 /* CustomViewTest.swift in Sources */,
 			);
