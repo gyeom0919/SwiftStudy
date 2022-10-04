@@ -69,18 +69,20 @@ class ViewController: UIViewController {
             $0.edges.equalTo(myScrollView.contentLayoutGuide.snp.edges)
         }
         
-        let dummyButtons : [UIButton] = Array(0...20).map{ index in
-//            UIButton(configuration: .filled()).then{
-//                $0.setTitle("\(index) 버튼", for: .normal)
-//            }
-            AllignedIconButton(title: "\(index) 버튼")
-
-        }
+        let icon = UIImage(systemName: "square.and.arrow.up.fill")
         
-        dummyButtons.forEach{ //반복문
-            buttonStackView.addArrangedSubview($0)
-        }
+//        let dummyButtons : [UIButton] = Array(0...20).map{ index in
+////            UIButton(configuration: .filled()).then{
+////                $0.setTitle("\(index) 버튼", for: .normal)
+////            }
+//            AllignedIconButton(title: "\(index) 버튼", icon: icon)
+//
+//        }
         
+//        dummyButtons.forEach{ //반복문
+//            buttonStackView.addArrangedSubview($0)
+//        }
+//
 
 //        buttonStackView.addArrangedSubview()
     }
