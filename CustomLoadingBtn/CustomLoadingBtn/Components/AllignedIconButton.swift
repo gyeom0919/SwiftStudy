@@ -10,6 +10,15 @@ import UIKit
 
 class AllignedIconButton : UIButton {
     
+    // 아이콘 정렬
+    enum IconAllignment{
+        case leading
+        case trailing
+    }
+    
+    // 기본 정렬 = 왼쪽
+    var iconAllignment : IconAllignment = .leading
+    
     var padding : UIEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     
     override init(frame: CGRect) {
@@ -22,7 +31,8 @@ class AllignedIconButton : UIButton {
         super.init(coder: coder)
     }
     
-    convenience init(title : String = "타이틀 없음",
+    convenience init(iconAllign : IconAllignment = .leading,
+                    title : String = "타이틀 없음",
                      bgColor: UIColor = .systemBlue,
                      tintColor : UIColor = .white,
                      radius : CGFloat = 8,
@@ -37,15 +47,36 @@ class AllignedIconButton : UIButton {
         self.layer.cornerRadius = radius
         self.setImage(icon, for: .normal)
         self.padding = padding
+        self.iconAllignment = iconAllign
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
         print("-")
         
-        let imgWidth = imageView?.frame.width ?? 0
+        switch iconAllignment{
+        case .leading: // 왼쪽 이미지 정렬
+            allignIconLeading()
+        case.trailing: // 오른쪽 이미지 정렬
+            allignIconTrailing()
+        }
         
-        // 왼쪽 이미지 정렬
+        contentEdgeInsets = padding
+        
+        
+    }
+       
+}
+
+//MARK: - 아이콘 정렬 관련
+extension AllignedIconButton {
+    
+    
+    /// 아이콘 왼쪽 정렬
+    fileprivate func allignIconLeading(){
+        
+        let imgWidth = imageView?.frame.width ?? 0
+
         contentHorizontalAlignment = .left
         let availableSpace = bounds.inset(by: contentEdgeInsets)
         
@@ -54,9 +85,22 @@ class AllignedIconButton : UIButton {
         let leftPadding = (availableWidth / 2) - (imgWidth / 2)
         
         titleEdgeInsets = UIEdgeInsets(top: 0, left: leftPadding, bottom: 0, right: 0)
-        
-        contentEdgeInsets = padding
-
     }
-       
+    
+    
+    /// 아이콘 오른쪽 정렬
+    fileprivate func allignIconTrailing(){
+        
+        let imgWidth = imageView?.frame.width ?? 0
+        
+        semanticContentAttribute = .forceRightToLeft
+        contentHorizontalAlignment = .right
+        let availableSpace = bounds.inset(by: contentEdgeInsets)
+        let availableWidth = availableSpace.width - imageEdgeInsets.left - (imageView?.frame.width ?? 0) - (titleLabel?.frame.width ?? 0)
+        
+        let rightPadding = (availableWidth / 2) - (imgWidth / 2)
+        
+        titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: rightPadding)
+        
+    }
 }

@@ -27,7 +27,7 @@ class CustomViewTest : UIView {
         
         let padding = UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
         
-        let button = AllignedIconButton(title: "버튼", icon: icon, padding: padding)
+        let button = AllignedIconButton(iconAllign: .trailing, title: "버튼", icon: icon, padding: padding)
 
         self.addSubview(button)
         
