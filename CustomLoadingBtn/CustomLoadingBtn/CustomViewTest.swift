@@ -27,7 +27,9 @@ class CustomViewTest : UIView {
         
         let padding = UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
         
-        let button = AllignedIconButton(iconAllign: .trailing, title: "버튼", icon: icon, padding: padding)
+        let font = UIFont.Sunflower() // 사이즈 수정 가능
+        
+        let button = AllignedIconButton(iconAllign: .trailing, title: "버튼", font: font ,icon: icon, padding: padding)
 
         self.addSubview(button)
         

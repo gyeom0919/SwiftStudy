@@ -22,6 +22,10 @@
 		8D778AE628E58EFE00AE5F06 /* CustomViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D778AE528E58EFE00AE5F06 /* CustomViewTest.swift */; };
 		8D778AE928E5E5EB00AE5F06 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8D778AE828E5E5EB00AE5F06 /* SnapKit */; };
 		8D778AEC28E5E67C00AE5F06 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 8D778AEB28E5E67C00AE5F06 /* Then */; };
+		8D9567BD28ED2EB1001B7170 /* Sunflower-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D9567BA28ED2EB1001B7170 /* Sunflower-Medium.ttf */; };
+		8D9567BE28ED2EB1001B7170 /* Sunflower-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D9567BB28ED2EB1001B7170 /* Sunflower-Bold.ttf */; };
+		8D9567BF28ED2EB1001B7170 /* Sunflower-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D9567BC28ED2EB1001B7170 /* Sunflower-Light.ttf */; };
+		8D9567C128ED3123001B7170 /* UIFont + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9567C028ED3123001B7170 /* UIFont + Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +63,10 @@
 		8D778AE128E58E7800AE5F06 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		8D778AE328E58E9400AE5F06 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		8D778AE528E58EFE00AE5F06 /* CustomViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewTest.swift; sourceTree = "<group>"; };
+		8D9567BA28ED2EB1001B7170 /* Sunflower-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sunflower-Medium.ttf"; sourceTree = "<group>"; };
+		8D9567BB28ED2EB1001B7170 /* Sunflower-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sunflower-Bold.ttf"; sourceTree = "<group>"; };
+		8D9567BC28ED2EB1001B7170 /* Sunflower-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sunflower-Light.ttf"; sourceTree = "<group>"; };
+		8D9567C028ED3123001B7170 /* UIFont + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +127,7 @@
 		8D778AAF28E58E4100AE5F06 /* CustomLoadingBtn */ = {
 			isa = PBXGroup;
 			children = (
+				8D9567B928ED2E7E001B7170 /* Fonts */,
 				8D52417E28EC16C9007CBA03 /* Components */,
 				8D778AE028E58E5A00AE5F06 /* Extension */,
 				8D778AB028E58E4100AE5F06 /* AppDelegate.swift */,
@@ -155,8 +164,19 @@
 			children = (
 				8D778AE128E58E7800AE5F06 /* UIViewController+Ext.swift */,
 				8D778AE328E58E9400AE5F06 /* UIView+Ext.swift */,
+				8D9567C028ED3123001B7170 /* UIFont + Ext.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		8D9567B928ED2E7E001B7170 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				8D9567BB28ED2EB1001B7170 /* Sunflower-Bold.ttf */,
+				8D9567BC28ED2EB1001B7170 /* Sunflower-Light.ttf */,
+				8D9567BA28ED2EB1001B7170 /* Sunflower-Medium.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,7 +293,10 @@
 			files = (
 				8D778ABD28E58E4200AE5F06 /* LaunchScreen.storyboard in Resources */,
 				8D778ABA28E58E4200AE5F06 /* Assets.xcassets in Resources */,
+				8D9567BE28ED2EB1001B7170 /* Sunflower-Bold.ttf in Resources */,
+				8D9567BF28ED2EB1001B7170 /* Sunflower-Light.ttf in Resources */,
 				8D778AB828E58E4100AE5F06 /* Main.storyboard in Resources */,
+				8D9567BD28ED2EB1001B7170 /* Sunflower-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +327,7 @@
 				8D778AE228E58E7800AE5F06 /* UIViewController+Ext.swift in Sources */,
 				8D52418028EC16EA007CBA03 /* AllignedIconButton.swift in Sources */,
 				8D778AB328E58E4100AE5F06 /* SceneDelegate.swift in Sources */,
+				8D9567C128ED3123001B7170 /* UIFont + Ext.swift in Sources */,
 				8D778AE628E58EFE00AE5F06 /* CustomViewTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -33,6 +33,7 @@ class AllignedIconButton : UIButton {
     
     convenience init(iconAllign : IconAllignment = .leading,
                     title : String = "타이틀 없음",
+                     font : UIFont = UIFont.Sunflower(.medium, size: 20), // 기본값은 항상 Sunflowr-Bold
                      bgColor: UIColor = .systemBlue,
                      tintColor : UIColor = .white,
                      radius : CGFloat = 8,
@@ -42,6 +43,7 @@ class AllignedIconButton : UIButton {
         
         self.init(type: .system)
         self.setTitle(title, for: .normal) // 외부에서 받은 title
+        self.titleLabel?.font = font
         self.backgroundColor = bgColor // 외부에서 받은 bgColor
         self.tintColor = tintColor // 외부에서 받은 tintColor
         self.layer.cornerRadius = radius
