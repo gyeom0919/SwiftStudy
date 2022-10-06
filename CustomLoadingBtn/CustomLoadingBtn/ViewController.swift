@@ -8,8 +8,13 @@
 import UIKit
 import SnapKit
 import Then
+import Combine
 
 class ViewController: UIViewController {
+    
+    @Published var loadingState : LoadingButton.LoadingState = .normal
+    
+    var subscriptions = Set<AnyCancellable>()
     
     // Then 사용 이전 코드
 //    lazy var myScrollView : UIScrollView = { // lazy?? (데이터를 나중에 올리게끔)
@@ -76,12 +81,34 @@ class ViewController: UIViewController {
 //                $0.setTitle("\(index) 버튼", for: .normal)
 //            }
             LoadingButton(title: "\(index) 버튼", icon: icon)
+          
 
         }
         
         dummyButtons.forEach{ //반복문
             buttonStackView.addArrangedSubview($0)
             $0.addTarget(self, action: #selector(onButtonClicked(_:)), for: .touchUpInside)
+            
+            let loadingStateLabel = UILabel().then{
+                $0.text = "로딩상태 라벨"
+                $0.font = UIFont.systemFont(ofSize: 30)
+                $0.backgroundColor = .white
+            }
+            
+            self.view.addSubview(loadingStateLabel)
+            
+            loadingStateLabel.snp.makeConstraints{
+                $0.top.equalTo(self.view.safeAreaLayoutGuide.snp.top)
+                $0.centerX.equalToSuperview()
+            }
+            
+            // 데이터를 퍼블리셔로 바꾸기 위해 $
+            // 콤바인 퍼블리셔 데이터 상태 <-> 버튼의 loadingState에 연결
+            self.$loadingState
+                .map{ $0 == .loading ? "로딩중" : "일반"}
+                .assign(to: \.text, on: loadingStateLabel)
+                .store(in: &subscriptions)
+        
         }
     }
 
@@ -96,7 +123,19 @@ extension ViewController {
     /// - Parameter sender: 클릭한 버튼
     @objc fileprivate func onButtonClicked(_ sender: LoadingButton){
         
-        sender.loadingState = sender.loadingState == .loading ? .normal : .loading
+//        if self.loadingState == .loading {
+//            return
+//        }
+        
+        self.loadingState = .loading
+        
+        // 딜레이 주기. 2초
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute:{
+            self.loadingState = .normal
+        })
+
+        
+//        sender.loadingState = sender.loadingState == .loading ? .normal : .loading
         
 //        if sender.loadingState == .loading {
 //            sender.loadingState = .normal

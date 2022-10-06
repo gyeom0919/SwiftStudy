@@ -135,6 +135,9 @@ extension LoadingButton{
     /// 로딩 숨기기
     fileprivate func hideLoading() {
         
+        // 로딩 아닐 시 다시 터치 활성화
+        self.isUserInteractionEnabled = true
+        
         self.indicator?.alpha = 0
         
         UIView.transition(with: self, duration: 0.2,
@@ -150,7 +153,8 @@ extension LoadingButton{
     /// 로딩 보여주기
     fileprivate func showLoading() {
         
-
+        //로딩을 보여줄 시 터치 불가능
+        self.isUserInteractionEnabled = false
         
         if indicator == nil {
             let myIndicator = UIActivityIndicatorView(style: .medium).then{
