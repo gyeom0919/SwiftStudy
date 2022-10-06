@@ -29,7 +29,9 @@ class CustomViewTest : UIView {
         
         let font = UIFont.Sunflower() // 사이즈 수정 가능
         
-        let button = AllignedIconButton(iconAllign: .trailing, title: "버튼", font: font ,icon: icon, padding: padding)
+        let button = LoadingButton(iconAllign: .trailing, title: "버튼", font: font ,icon: icon, padding: padding)
+        
+        
 
         self.addSubview(button)
         
@@ -40,6 +42,7 @@ class CustomViewTest : UIView {
 
     }
 }
+
 
 #if DEBUG
 

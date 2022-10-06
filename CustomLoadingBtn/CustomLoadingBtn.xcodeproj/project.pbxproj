@@ -26,6 +26,7 @@
 		8D9567BE28ED2EB1001B7170 /* Sunflower-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D9567BB28ED2EB1001B7170 /* Sunflower-Bold.ttf */; };
 		8D9567BF28ED2EB1001B7170 /* Sunflower-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D9567BC28ED2EB1001B7170 /* Sunflower-Light.ttf */; };
 		8D9567C128ED3123001B7170 /* UIFont + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9567C028ED3123001B7170 /* UIFont + Ext.swift */; };
+		8D9567C328ED33A9001B7170 /* LoadingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9567C228ED33A9001B7170 /* LoadingButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		8D9567BB28ED2EB1001B7170 /* Sunflower-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sunflower-Bold.ttf"; sourceTree = "<group>"; };
 		8D9567BC28ED2EB1001B7170 /* Sunflower-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sunflower-Light.ttf"; sourceTree = "<group>"; };
 		8D9567C028ED3123001B7170 /* UIFont + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + Ext.swift"; sourceTree = "<group>"; };
+		8D9567C228ED33A9001B7170 /* LoadingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				8D52417F28EC16EA007CBA03 /* AllignedIconButton.swift */,
+				8D9567C228ED33A9001B7170 /* LoadingButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D9567C328ED33A9001B7170 /* LoadingButton.swift in Sources */,
 				8D778AB528E58E4100AE5F06 /* ViewController.swift in Sources */,
 				8D778AB128E58E4100AE5F06 /* AppDelegate.swift in Sources */,
 				8D778AE428E58E9400AE5F06 /* UIView+Ext.swift in Sources */,

@@ -71,22 +71,40 @@ class ViewController: UIViewController {
         
         let icon = UIImage(systemName: "square.and.arrow.up.fill")
         
-//        let dummyButtons : [UIButton] = Array(0...20).map{ index in
-////            UIButton(configuration: .filled()).then{
-////                $0.setTitle("\(index) 버튼", for: .normal)
-////            }
-//            AllignedIconButton(title: "\(index) 버튼", icon: icon)
-//
-//        }
-        
-//        dummyButtons.forEach{ //반복문
-//            buttonStackView.addArrangedSubview($0)
-//        }
-//
+        let dummyButtons : [LoadingButton] = Array(0...20).map{ index in
+//            UIButton(configuration: .filled()).then{
+//                $0.setTitle("\(index) 버튼", for: .normal)
+//            }
+            LoadingButton(title: "\(index) 버튼", icon: icon)
 
-//        buttonStackView.addArrangedSubview()
+        }
+        
+        dummyButtons.forEach{ //반복문
+            buttonStackView.addArrangedSubview($0)
+            $0.addTarget(self, action: #selector(onButtonClicked(_:)), for: .touchUpInside)
+        }
     }
 
+}
+
+
+//MARK: - 액션관련
+extension ViewController {
+
+    
+    /// 버튼 클릭 시
+    /// - Parameter sender: 클릭한 버튼
+    @objc fileprivate func onButtonClicked(_ sender: LoadingButton){
+        
+        sender.loadingState = sender.loadingState == .loading ? .normal : .loading
+        
+//        if sender.loadingState == .loading {
+//            sender.loadingState = .normal
+//        } else {
+//            sender.loadingState = .loading
+//        }
+        
+    }
 }
 
 
