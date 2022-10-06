@@ -9,11 +9,21 @@ import UIKit
 import SnapKit
 import Then
 import Combine
+import RxCocoa
+import RxSwift
 
 class ViewController: UIViewController {
     
+    // Combine
     @Published var loadingState : LoadingButton.LoadingState = .normal
     
+    // Rx
+    let loadingStateRx = BehaviorRelay<LoadingButton.LoadingState>(value: .normal)
+    
+    // Rx 메모리 관리
+    let disposeBag = DisposeBag()
+    
+    // combine 메모리 관리
     var subscriptions = Set<AnyCancellable>()
     
     // Then 사용 이전 코드
@@ -60,7 +70,7 @@ class ViewController: UIViewController {
     /// UI 설정
     fileprivate func setupUI() {
         self.view.addSubview(myScrollView)
-         
+        
         buttonStackView.snp.makeConstraints{
             $0.edges.equalToSuperview().inset(20) //모서리를 부모 객체에 20만큼 간격
         }
@@ -77,42 +87,58 @@ class ViewController: UIViewController {
         let icon = UIImage(systemName: "square.and.arrow.up.fill")
         
         let dummyButtons : [LoadingButton] = Array(0...20).map{ index in
-//            UIButton(configuration: .filled()).then{
-//                $0.setTitle("\(index) 버튼", for: .normal)
-//            }
+            //            UIButton(configuration: .filled()).then{
+            //                $0.setTitle("\(index) 버튼", for: .normal)
+            //            }
             LoadingButton(title: "\(index) 버튼", icon: icon)
-          
-
+            
+            
         }
         
         dummyButtons.forEach{ //반복문
             buttonStackView.addArrangedSubview($0)
             $0.addTarget(self, action: #selector(onButtonClicked(_:)), for: .touchUpInside)
             
-            let loadingStateLabel = UILabel().then{
-                $0.text = "로딩상태 라벨"
-                $0.font = UIFont.systemFont(ofSize: 30)
-                $0.backgroundColor = .white
-            }
-            
-            self.view.addSubview(loadingStateLabel)
-            
-            loadingStateLabel.snp.makeConstraints{
-                $0.top.equalTo(self.view.safeAreaLayoutGuide.snp.top)
-                $0.centerX.equalToSuperview()
-            }
-            
             // 데이터를 퍼블리셔로 바꾸기 위해 $
             // 콤바인 퍼블리셔 데이터 상태 <-> 버튼의 loadingState에 연결
-            self.$loadingState
-                .map{ $0 == .loading ? "로딩중" : "일반"}
-                .assign(to: \.text, on: loadingStateLabel)
-                .store(in: &subscriptions)
-        
+            //            self.$loadingState
+            //                .assign(to: \.loadingState, on: $0)
+            //                .store(in: &subscriptions)
+            
+            // Rx 옵져버블 (데이터 주고받기 ) 데이터의 상태 <-> 버튼의 loadingState
+            self.loadingStateRx
+                .bind(to: $0.rx.loadingState)
+                .disposed(by: disposeBag)
         }
+        
+        let loadingStateLabel = UILabel().then{
+            $0.text = "로딩상태 라벨"
+            $0.font = UIFont.systemFont(ofSize: 30)
+            $0.backgroundColor = .white
+        }
+        
+        self.view.addSubview(loadingStateLabel)
+        
+        loadingStateLabel.snp.makeConstraints{
+            $0.top.equalTo(self.view.safeAreaLayoutGuide.snp.top)
+            $0.centerX.equalToSuperview()
+        }
+        
+//        // 콤바인
+//        self.$loadingState
+//            .map{ $0 == .loading ? "로딩중" : "일반"}
+//            .assign(to: \.text, on: loadingStateLabel)
+//            .store(in: &subscriptions)
+//
+        // Rx
+        self.loadingStateRx
+            .map{ $0 == .loading ? "로딩중" : "일반"}
+            .bind(to: loadingStateLabel.rx.text)
+            .disposed(by: disposeBag)
     }
-
 }
+
+
 
 
 //MARK: - 액션관련
@@ -123,15 +149,15 @@ extension ViewController {
     /// - Parameter sender: 클릭한 버튼
     @objc fileprivate func onButtonClicked(_ sender: LoadingButton){
         
-//        if self.loadingState == .loading {
-//            return
-//        }
+        if self.loadingStateRx.value == .loading {
+            return
+        }
         
-        self.loadingState = .loading
+        self.loadingStateRx.accept(.loading)
         
         // 딜레이 주기. 2초
         DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute:{
-            self.loadingState = .normal
+            self.loadingStateRx.accept(.normal)
         })
 
         
@@ -155,11 +181,12 @@ extension ViewController {
 #if DEBUG
 
 import SwiftUI
+import RxRelay
 
 struct ViewController_Previews: PreviewProvider {
     static var previews: some View {
         ViewController().getPreview()
-//            .ignoresSafeArea()
+            .ignoresSafeArea()
     }
 }
 
