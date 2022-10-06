@@ -37,7 +37,11 @@ class LoadingButton : UIButton {
         }
     }
     
-    lazy var indicator : UIActivityIndicatorView? = nil
+    var indicatorType : IndicatorType = .sysDefault
+    
+     var indicator : UIView? = nil
+    
+    var indicatorColor : UIColor = .gray
     
     // 기본 정렬 = 왼쪽
     var iconAllignment : IconAllignment = .leading
@@ -54,7 +58,8 @@ class LoadingButton : UIButton {
         super.init(coder: coder)
     }
     
-    convenience init(iconAllign : IconAllignment = .leading,
+    convenience init(indicatorType : IndicatorType = .sysDefault,
+                    iconAllign : IconAllignment = .leading,
                     title : String = "타이틀 없음",
                      font : UIFont = UIFont.Sunflower(.medium, size: 20), // 기본값은 항상 Sunflowr-Bold
                      bgColor: UIColor = .systemBlue,
@@ -63,12 +68,13 @@ class LoadingButton : UIButton {
                      icon : UIImage? = nil, // icon이 없을 경우 nil
                      padding : UIEdgeInsets = UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20)
     ) { // 생성자 + 매개변수 or 타입
-        
         self.init(type: .system)
+        self.indicatorType = indicatorType
         self.setTitle(title, for: .normal) // 외부에서 받은 title
         self.titleLabel?.font = font
         self.backgroundColor = bgColor // 외부에서 받은 bgColor
         self.tintColor = tintColor // 외부에서 받은 tintColor
+        self.indicatorColor = tintColor
         self.layer.cornerRadius = radius
         self.setImage(icon, for: .normal)
         self.padding = padding
@@ -156,11 +162,17 @@ extension LoadingButton{
         //로딩을 보여줄 시 터치 불가능
         self.isUserInteractionEnabled = false
         
+        // indicator가 없으면 만들어서 넣기
         if indicator == nil {
-            let myIndicator = UIActivityIndicatorView(style: .medium).then{
-                $0.color = .white
-                $0.startAnimating()
-            }
+            
+            let myIndicator = indicatorType.getIndicator(self.indicatorColor)
+            myIndicator.transform = CGAffineTransform(scaleX: 0.8, y: 0.8) // indicator의 사이즈 변경
+            myIndicator.startAnimating()
+            
+//            let myIndicator = UIActivityIndicatorView(style: .medium).then{
+//                $0.color = .white
+//                $0.startAnimating()
+//            }
             self.addSubview(myIndicator)
             myIndicator.snp.makeConstraints{
                 $0.center.equalToSuperview()

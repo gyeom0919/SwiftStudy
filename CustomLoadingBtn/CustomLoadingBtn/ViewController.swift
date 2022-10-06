@@ -31,7 +31,7 @@ class ViewController: UIViewController {
 //        let scrollView = UIScrollView()
 //        return scrollView
 //    }()
-    
+     
     //Then을 사용한 후
     lazy var myScrollView : UIScrollView = UIScrollView().then{
         $0.isUserInteractionEnabled = true
@@ -86,14 +86,14 @@ class ViewController: UIViewController {
         
         let icon = UIImage(systemName: "square.and.arrow.up.fill")
         
-        let dummyButtons : [LoadingButton] = Array(0...20).map{ index in
-            //            UIButton(configuration: .filled()).then{
-            //                $0.setTitle("\(index) 버튼", for: .normal)
-            //            }
-            LoadingButton(title: "\(index) 버튼", icon: icon)
-            
-            
+//        let dummyButtons : [LoadingButton] = Array(0...20).map{ index in
+//            LoadingButton(title: "\(index) 버튼", icon: icon)
+//
+        let dummyButtons : [LoadingButton] = IndicatorType.allCases.map{
+            type in LoadingButton(indicatorType: type,title: type.rawValue, icon: icon)
         }
+            
+//        }
         
         dummyButtons.forEach{ //반복문
             buttonStackView.addArrangedSubview($0)
