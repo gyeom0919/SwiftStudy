@@ -12,6 +12,8 @@ import Combine
 import RxCocoa
 import RxSwift
 
+// 메인 뷰 컨트롤러
+
 class ViewController: UIViewController {
     
     // Combine
@@ -95,6 +97,7 @@ class ViewController: UIViewController {
             
 //        }
         
+        // for 문 사용되신 반복문
         dummyButtons.forEach{ //반복문
             buttonStackView.addArrangedSubview($0)
             $0.addTarget(self, action: #selector(onButtonClicked(_:)), for: .touchUpInside)
