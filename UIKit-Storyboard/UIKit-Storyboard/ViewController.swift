@@ -19,6 +19,11 @@ class MyViewController: UIViewController {
         
 //        yellowView.layer.cornerRadius = 20
 //        yellowView.cornerRadius = 30
+        
+//        yellowView.layer.masksToBounds = false
+//        yellowView.borderWidth = 5 // 가장자리 보더라인 두께
+//        yellowView.layer.borderColor = UIColor.gray.cgColor
+    
     }
 
 
