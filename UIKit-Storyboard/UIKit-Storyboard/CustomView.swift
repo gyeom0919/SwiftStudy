@@ -42,6 +42,15 @@ class CustomView : UIView {
         }
     }
     
+    @IBInspectable
+    var hasShadow : Bool = false {
+        didSet{
+            if hasShadow {
+                layer.applyShadow()
+            }
+        }
+    }
+    
     // 커스텀 뷰 안에서만 사용  하는 함수 (fileprivate)
     
     /// 뷰 정사각형 여부
@@ -55,6 +64,8 @@ class CustomView : UIView {
             return self.frame.width == self.frame.height
         }
     }
+    
+    
     
     
     
