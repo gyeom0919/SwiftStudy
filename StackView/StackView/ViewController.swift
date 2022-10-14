@@ -49,6 +49,7 @@ class ViewController: UIViewController {
     }
 }
 
+
 //MARK: - View 관련
 extension ViewController {
     
@@ -143,10 +144,9 @@ struct ViewControllerPresentable: UIViewControllerRepresentable {
 struct ViewControllerPrepresentable_PreviewProvider : PreviewProvider {
     static var previews: some View {
         ViewControllerPresentable()
-            .previewDevice("iPhone 12 mini")
-            .previewDisplayName("iPhone 12 mini")
             .ignoresSafeArea()
     }
 }
 
 #endif
+
