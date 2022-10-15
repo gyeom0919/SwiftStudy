@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class ViewController: UIViewController {
     
@@ -37,12 +38,22 @@ class ViewController: UIViewController {
         self.view.addSubview(topStackView)
         
         
-        // 위치 잡기
-        NSLayoutConstraint.activate([
-            topStackView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            topStackView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 100),
-            topStackView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20)
-        ])
+        // 위치 잡기 - NSLayoutConstaint
+//        NSLayoutConstraint.activate([
+//            topStackView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+//            topStackView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 100),
+//            topStackView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20)
+//        ])
+        
+        topStackView.snp.makeConstraints{
+            // 크기
+            // 위치
+            $0.top.equalToSuperview().offset(100)
+            $0.centerX.equalToSuperview()
+            $0.left.equalToSuperview().offset(20)
+        }
+        
+        
         
         
         print(#function)
