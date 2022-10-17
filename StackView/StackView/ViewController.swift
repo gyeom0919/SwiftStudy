@@ -38,12 +38,6 @@ class ViewController: UIViewController {
         self.view.addSubview(topStackView)
         
         
-        // 위치 잡기 - NSLayoutConstaint
-//        NSLayoutConstraint.activate([
-//            topStackView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-//            topStackView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 100),
-//            topStackView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20)
-//        ])
         
         topStackView.snp.makeConstraints{
             // 크기
@@ -53,10 +47,28 @@ class ViewController: UIViewController {
             $0.left.equalToSuperview().offset(20)
         }
         
-        
-        
-        
         print(#function)
+        
+        let secondStackView = generateSecondStackView()
+       
+        self.view.addSubview(secondStackView)
+        
+        NSLayoutConstraint.activate([
+            secondStackView.leadingAnchor.constraint(equalTo: topStackView.leadingAnchor),
+            secondStackView.trailingAnchor.constraint(equalTo: topStackView.trailingAnchor),
+            secondStackView.topAnchor.constraint(equalTo: topStackView.bottomAnchor, constant: 20)
+        ])
+        
+        let thirdStackView = generateKaKaoStackView()
+        
+        self.view.addSubview(thirdStackView)
+
+        NSLayoutConstraint.activate([
+            thirdStackView.leadingAnchor.constraint(equalTo: secondStackView.leadingAnchor),
+            thirdStackView.trailingAnchor.constraint(equalTo: secondStackView.trailingAnchor),
+            thirdStackView.topAnchor.constraint(equalTo: secondStackView.bottomAnchor, constant: 20)
+        ])
+        
     }
 }
 
@@ -64,11 +76,105 @@ class ViewController: UIViewController {
 //MARK: - View 관련
 extension ViewController {
     
+    /// 두번째 스택뷰 생성
+    /// - Returns: 생성된 스택뷰
+    fileprivate func generateKaKaoStackView() -> UIStackView {
+        
+        let firstLabel = UILabel()
+        firstLabel.text = "내 카카오 뱅크 입출금 통장"
+        firstLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        let secondLabel = UILabel()
+        secondLabel.text = "젤리 교환소"
+        secondLabel.font = UIFont.systemFont(ofSize: 12)
+        secondLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        let trailingImgView = UIImageView()
+        trailingImgView.image = UIImage(systemName: "pencil.line")
+        trailingImgView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            trailingImgView.widthAnchor.constraint(equalToConstant: 20),
+            trailingImgView.heightAnchor.constraint(equalToConstant: 20)
+        ])
+        
+        let secondStackView : UIStackView = {
+            let stackView = UIStackView(arrangedSubviews: [
+                firstLabel,
+                secondLabel,
+                trailingImgView
+            ])
+            stackView.spacing = 5
+            stackView.alignment = .center
+            stackView.axis = .horizontal
+            stackView.distribution = .equalCentering // 아이템 정가운데로
+            stackView.backgroundColor = UIColor.systemYellow
+            stackView.isLayoutMarginsRelativeArrangement = true // Padding 넣기
+            stackView.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20)
+            stackView.layer.borderColor = UIColor.systemBlue.cgColor
+            stackView.layer.borderWidth = 2
+            stackView.layer.cornerRadius = 10
+            stackView.translatesAutoresizingMaskIntoConstraints = false
+            return stackView
+        }()
+        
+        return secondStackView
+    }
+    
+    /// 두번째 스택뷰 생성
+    /// - Returns: 생성된 스택뷰
+    fileprivate func generateSecondStackView() -> UIStackView {
+        
+        let leadingImgView = UIImageView()
+        leadingImgView.image = UIImage(systemName: "pencil.line")
+        leadingImgView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            leadingImgView.widthAnchor.constraint(equalToConstant: 50),
+            leadingImgView.heightAnchor.constraint(equalToConstant: 50)
+        ])
+            
+        let centerLabel = UILabel()
+        centerLabel.text = "젤리 교환소"
+        centerLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        let trailingImgView = UIImageView()
+        trailingImgView.image = UIImage(systemName: "pencil.line")
+        trailingImgView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            trailingImgView.widthAnchor.constraint(equalToConstant: 50),
+            trailingImgView.heightAnchor.constraint(equalToConstant: 50)
+        ])
+        
+        let secondStackView : UIStackView = {
+            let stackView = UIStackView(arrangedSubviews: [
+                leadingImgView,
+                centerLabel,
+                trailingImgView
+            ])
+            stackView.spacing = 0
+            stackView.alignment = .center
+            stackView.axis = .horizontal
+            stackView.distribution = .equalCentering // 아이템 정가운데로
+            stackView.backgroundColor = UIColor.systemYellow
+            stackView.isLayoutMarginsRelativeArrangement = true // Padding 넣기
+            stackView.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10)
+            stackView.layer.borderColor = UIColor.systemBlue.cgColor
+            stackView.layer.borderWidth = 2
+            stackView.layer.cornerRadius = 10
+            stackView.translatesAutoresizingMaskIntoConstraints = false
+            return stackView
+        }()
+        return secondStackView
+    }
+    
     fileprivate func generateMyCardView() -> MyCardView {
         let card = MyCardView()
         card.translatesAutoresizingMaskIntoConstraints = false
         return card
     }
+    
     
     /// 카드 뷰 생성 및 반환
     /// - Returns: 카드 뷰 반환

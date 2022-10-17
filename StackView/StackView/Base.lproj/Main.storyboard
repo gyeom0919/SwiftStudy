@@ -17,32 +17,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hHw-Ze-Paq" userLabel="firstStackView">
-                                <rect key="frame" x="16" y="47" width="342.33333333333331" height="50"/>
+                                <rect key="frame" x="16" y="47" width="342.33333333333331" height="66"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="r8G-EK-xf7">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="8" y="8" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Ilj-OG-RtN"/>
                                             <constraint firstAttribute="width" constant="50" id="nQL-mZ-7Wo"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="젤리 교환소" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ShV-c1-BbY">
-                                        <rect key="frame" x="132.33333333333334" y="14.999999999999998" width="78" height="20.333333333333329"/>
+                                        <rect key="frame" x="132.33333333333334" y="23" width="78" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y2j-fz-O9E">
-                                        <rect key="frame" x="292.33333333333331" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="284.33333333333331" y="8" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="kgl-cg-g8F"/>
                                             <constraint firstAttribute="height" constant="50" id="zeV-MG-gTf"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
+                                <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DIL-DL-7nk" userLabel="secondStackViewController">
-                                <rect key="frame" x="16" y="105" width="342.33333333333331" height="65"/>
+                                <rect key="frame" x="16" y="121" width="342.33333333333331" height="65"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="QHW-dl-ypp" userLabel="secondStackView">
                                         <rect key="frame" x="20" y="20" width="302.33333333333331" height="25"/>
@@ -83,7 +84,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hjo-dN-vaH">
-                                <rect key="frame" x="10" y="199" width="355" height="266"/>
+                                <rect key="frame" x="10" y="215" width="355" height="266"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Ktv-8F-XP2">
                                         <rect key="frame" x="0.0" y="0.0" width="355" height="75.333333333333329"/>
