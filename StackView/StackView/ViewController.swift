@@ -7,20 +7,29 @@
 
 import UIKit
 import SnapKit
+import Then
 
 class ViewController: UIViewController {
     
-    lazy var topStackView : UIStackView = {
-        let stackView = UIStackView()
-        stackView.spacing = 10
-        stackView.alignment = .center
-        stackView.axis = .horizontal
-        stackView.distribution = .fillEqually // 동등하게 채우기
-//        stackView.backgroundColor = .systemRed
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        
-        return stackView
-    }()
+//    lazy var topStackView : UIStackView = {
+//        let stackView = UIStackView()
+//        stackView.spacing = 10
+//        stackView.alignment = .center
+//        stackView.axis = .horizontal
+//        stackView.distribution = .fillEqually // 동등하게 채우기
+////        stackView.backgroundColor = .systemRed
+//        stackView.translatesAutoresizingMaskIntoConstraints = false
+//
+//        return stackView
+//    }()
+    
+    lazy var topStackView = UIStackView().then{
+        $0.spacing = 10
+        $0.alignment = .center
+        $0.axis = .horizontal
+        $0.distribution = .fillEqually
+        $0.translatesAutoresizingMaskIntoConstraints = false
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,21 +62,34 @@ class ViewController: UIViewController {
        
         self.view.addSubview(secondStackView)
         
-        NSLayoutConstraint.activate([
-            secondStackView.leadingAnchor.constraint(equalTo: topStackView.leadingAnchor),
-            secondStackView.trailingAnchor.constraint(equalTo: topStackView.trailingAnchor),
-            secondStackView.topAnchor.constraint(equalTo: topStackView.bottomAnchor, constant: 20)
-        ])
+        secondStackView.snp.makeConstraints{ make in
+            make.horizontalEdges.equalTo(self.topStackView.snp.horizontalEdges)
+            make.top.equalTo(topStackView.snp.bottom).offset(20)
+        }
+        
+        // 기존 오토레이아웃
+//        NSLayoutConstraint.activate([
+//            secondStackView.leadingAnchor.constraint(equalTo: topStackView.leadingAnchor),
+//            secondStackView.trailingAnchor.constraint(equalTo: topStackView.trailingAnchor),
+//            secondStackView.topAnchor.constraint(equalTo: topStackView.bottomAnchor, constant: 20)
+//        ])
         
         let thirdStackView = generateKaKaoStackView()
         
         self.view.addSubview(thirdStackView)
+        
+        thirdStackView.snp.makeConstraints{
+            make in
+            make.horizontalEdges.equalTo(secondStackView.snp.horizontalEdges)
+            make.top.equalTo(secondStackView.snp.bottom).offset(20)
+        }
+        
 
-        NSLayoutConstraint.activate([
-            thirdStackView.leadingAnchor.constraint(equalTo: secondStackView.leadingAnchor),
-            thirdStackView.trailingAnchor.constraint(equalTo: secondStackView.trailingAnchor),
-            thirdStackView.topAnchor.constraint(equalTo: secondStackView.bottomAnchor, constant: 20)
-        ])
+//        NSLayoutConstraint.activate([
+//            thirdStackView.leadingAnchor.constraint(equalTo: secondStackView.leadingAnchor),
+//            thirdStackView.trailingAnchor.constraint(equalTo: secondStackView.trailingAnchor),
+//            thirdStackView.topAnchor.constraint(equalTo: secondStackView.bottomAnchor, constant: 20)
+//        ])
         
     }
 }
@@ -93,30 +115,36 @@ extension ViewController {
         trailingImgView.image = UIImage(systemName: "pencil.line")
         trailingImgView.translatesAutoresizingMaskIntoConstraints = false
         
-        NSLayoutConstraint.activate([
-            trailingImgView.widthAnchor.constraint(equalToConstant: 20),
-            trailingImgView.heightAnchor.constraint(equalToConstant: 20)
-        ])
+        trailingImgView.snp.makeConstraints{ make in
+//            make.width.equalTo(20)
+//            make.height.equalTo(20)
+            make.size.equalTo(20) // 정사각형이라 사이즈 적용
+        }
         
-        let secondStackView : UIStackView = {
-            let stackView = UIStackView(arrangedSubviews: [
-                firstLabel,
-                secondLabel,
-                trailingImgView
-            ])
-            stackView.spacing = 5
-            stackView.alignment = .center
-            stackView.axis = .horizontal
-            stackView.distribution = .equalCentering // 아이템 정가운데로
-            stackView.backgroundColor = UIColor.systemYellow
-            stackView.isLayoutMarginsRelativeArrangement = true // Padding 넣기
-            stackView.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20)
-            stackView.layer.borderColor = UIColor.systemBlue.cgColor
-            stackView.layer.borderWidth = 2
-            stackView.layer.cornerRadius = 10
-            stackView.translatesAutoresizingMaskIntoConstraints = false
-            return stackView
-        }()
+//        NSLayoutConstraint.activate([
+//            trailingImgView.widthAnchor.constraint(equalToConstant: 20),
+//            trailingImgView.heightAnchor.constraint(equalToConstant: 20)
+//        ])
+        
+        let secondStackView = UIStackView().then{
+            let stackView = UIStackView()
+            
+            $0.addArrangedSubview(firstLabel)
+            $0.addArrangedSubview(secondLabel)
+            $0.addArrangedSubview(trailingImgView)
+
+            $0.spacing = 5
+            $0.alignment = .center
+            $0.axis = .horizontal
+            $0.distribution = .equalCentering // 아이템 정가운데로
+            $0.backgroundColor = UIColor.systemYellow
+            $0.isLayoutMarginsRelativeArrangement = true // Padding 넣기
+            $0.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20)
+            $0.layer.borderColor = UIColor.systemBlue.cgColor
+            $0.layer.borderWidth = 2
+            $0.layer.cornerRadius = 10
+            $0.translatesAutoresizingMaskIntoConstraints = false
+        }
         
         return secondStackView
     }
