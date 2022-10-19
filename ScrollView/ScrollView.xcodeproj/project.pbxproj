@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D0FCB6529001BED00D7051A /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0FCB6429001BED00D7051A /* MainVC.swift */; };
+		8D0FCB6829001C8900D7051A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8D0FCB6729001C8900D7051A /* SnapKit */; };
+		8D0FCB6B29001C9200D7051A /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 8D0FCB6A29001C9200D7051A /* Then */; };
+		8D0FCB6E29001C9D00D7051A /* Fakery in Frameworks */ = {isa = PBXBuildFile; productRef = 8D0FCB6D29001C9D00D7051A /* Fakery */; };
 		8D9BD66228FF85E1006C09A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9BD66128FF85E1006C09A9 /* AppDelegate.swift */; };
 		8D9BD66428FF85E1006C09A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9BD66328FF85E1006C09A9 /* SceneDelegate.swift */; };
 		8D9BD66628FF85E1006C09A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9BD66528FF85E1006C09A9 /* ViewController.swift */; };
@@ -36,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D0FCB6429001BED00D7051A /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		8D9BD65E28FF85E1006C09A9 /* ScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D9BD66128FF85E1006C09A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D9BD66328FF85E1006C09A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +61,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D0FCB6829001C8900D7051A /* SnapKit in Frameworks */,
+				8D0FCB6B29001C9200D7051A /* Then in Frameworks */,
+				8D0FCB6E29001C9D00D7051A /* Fakery in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +109,7 @@
 			children = (
 				8D9BD66128FF85E1006C09A9 /* AppDelegate.swift */,
 				8D9BD66328FF85E1006C09A9 /* SceneDelegate.swift */,
+				8D0FCB6429001BED00D7051A /* MainVC.swift */,
 				8D9BD66528FF85E1006C09A9 /* ViewController.swift */,
 				8D9BD66728FF85E1006C09A9 /* Main.storyboard */,
 				8D9BD66A28FF85E2006C09A9 /* Assets.xcassets */,
@@ -143,6 +152,11 @@
 			dependencies = (
 			);
 			name = ScrollView;
+			packageProductDependencies = (
+				8D0FCB6729001C8900D7051A /* SnapKit */,
+				8D0FCB6A29001C9200D7051A /* Then */,
+				8D0FCB6D29001C9D00D7051A /* Fakery */,
+			);
 			productName = ScrollView;
 			productReference = 8D9BD65E28FF85E1006C09A9 /* ScrollView.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +229,11 @@
 				Base,
 			);
 			mainGroup = 8D9BD65528FF85E1006C09A9;
+			packageReferences = (
+				8D0FCB6629001C8900D7051A /* XCRemoteSwiftPackageReference "SnapKit" */,
+				8D0FCB6929001C9200D7051A /* XCRemoteSwiftPackageReference "Then" */,
+				8D0FCB6C29001C9D00D7051A /* XCRemoteSwiftPackageReference "Fakery" */,
+			);
 			productRefGroup = 8D9BD65F28FF85E1006C09A9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D9BD66628FF85E1006C09A9 /* ViewController.swift in Sources */,
+				8D0FCB6529001BED00D7051A /* MainVC.swift in Sources */,
 				8D9BD66228FF85E1006C09A9 /* AppDelegate.swift in Sources */,
 				8D9BD66428FF85E1006C09A9 /* SceneDelegate.swift in Sources */,
 			);
@@ -602,6 +622,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8D0FCB6629001C8900D7051A /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+		8D0FCB6929001C9200D7051A /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		8D0FCB6C29001C9D00D7051A /* XCRemoteSwiftPackageReference "Fakery" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vadymmarkov/Fakery.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8D0FCB6729001C8900D7051A /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8D0FCB6629001C8900D7051A /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		8D0FCB6A29001C9200D7051A /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8D0FCB6929001C9200D7051A /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+		8D0FCB6D29001C9D00D7051A /* Fakery */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8D0FCB6C29001C9D00D7051A /* XCRemoteSwiftPackageReference "Fakery" */;
+			productName = Fakery;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8D9BD65628FF85E1006C09A9 /* Project object */;
 }
