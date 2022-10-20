@@ -11,6 +11,7 @@
 		8D0FCB6829001C8900D7051A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8D0FCB6729001C8900D7051A /* SnapKit */; };
 		8D0FCB6B29001C9200D7051A /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 8D0FCB6A29001C9200D7051A /* Then */; };
 		8D0FCB6E29001C9D00D7051A /* Fakery in Frameworks */ = {isa = PBXBuildFile; productRef = 8D0FCB6D29001C9D00D7051A /* Fakery */; };
+		8D0FCB7129011A4200D7051A /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 8D0FCB7029011A4200D7051A /* Lottie */; };
 		8D9BD66228FF85E1006C09A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9BD66128FF85E1006C09A9 /* AppDelegate.swift */; };
 		8D9BD66428FF85E1006C09A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9BD66328FF85E1006C09A9 /* SceneDelegate.swift */; };
 		8D9BD66628FF85E1006C09A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9BD66528FF85E1006C09A9 /* ViewController.swift */; };
@@ -64,6 +65,7 @@
 				8D0FCB6829001C8900D7051A /* SnapKit in Frameworks */,
 				8D0FCB6B29001C9200D7051A /* Then in Frameworks */,
 				8D0FCB6E29001C9D00D7051A /* Fakery in Frameworks */,
+				8D0FCB7129011A4200D7051A /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,6 +158,7 @@
 				8D0FCB6729001C8900D7051A /* SnapKit */,
 				8D0FCB6A29001C9200D7051A /* Then */,
 				8D0FCB6D29001C9D00D7051A /* Fakery */,
+				8D0FCB7029011A4200D7051A /* Lottie */,
 			);
 			productName = ScrollView;
 			productReference = 8D9BD65E28FF85E1006C09A9 /* ScrollView.app */;
@@ -233,6 +236,7 @@
 				8D0FCB6629001C8900D7051A /* XCRemoteSwiftPackageReference "SnapKit" */,
 				8D0FCB6929001C9200D7051A /* XCRemoteSwiftPackageReference "Then" */,
 				8D0FCB6C29001C9D00D7051A /* XCRemoteSwiftPackageReference "Fakery" */,
+				8D0FCB6F29011A4200D7051A /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 8D9BD65F28FF85E1006C09A9 /* Products */;
 			projectDirPath = "";
@@ -648,6 +652,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		8D0FCB6F29011A4200D7051A /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -665,6 +677,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8D0FCB6C29001C9D00D7051A /* XCRemoteSwiftPackageReference "Fakery" */;
 			productName = Fakery;
+		};
+		8D0FCB7029011A4200D7051A /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8D0FCB6F29011A4200D7051A /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -17,6 +17,17 @@ class MainVC : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
+        setupScrollViewDefault()
+    }
+    
+}
+
+//MARK: - UI 세팅
+extension MainVC {
+    
+    
+    /// 기본 스크롤뷰 셋업
+    fileprivate func setupScrollViewDefault() {
         
         let faker = Faker(locale: "ko")
         
@@ -29,12 +40,17 @@ class MainVC : UIViewController {
             $0.backgroundColor = UIColor.systemYellow
             $0.addSubview(contentLabel)
         }
+    
+        
+//        contentLabel.snp.makeConstraints {
+//            $0.centerX.equalToSuperview()
+//            $0.centerY.equalToSuperview()
+//            $0.left.equalTo(containerView.snp.left).offset(20)
+//            $0.top.equalTo(containerView.snp.top).offset(20)
+//        }
         
         contentLabel.snp.makeConstraints {
-            $0.centerX.equalToSuperview()
-            $0.centerY.equalToSuperview()
-            $0.left.equalTo(containerView.snp.left).offset(20)
-            $0.top.equalTo(containerView.snp.top).offset(20)
+            $0.edges.equalToSuperview().inset(20)
         }
         
         let scrollView = UIScrollView().then{
@@ -60,9 +76,7 @@ class MainVC : UIViewController {
             $0.right.equalTo(self.view.snp.right)
             $0.width.equalTo(self.view.snp.width).multipliedBy(1)
         }
-        
     }
-    
 }
 
 #if DEBUG
