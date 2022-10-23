@@ -61,10 +61,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BoD-TF-pKF" userLabel="Number4">
+                                <rect key="frame" x="145" y="163" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Y2p-Y2-M0N"/>
+                                    <constraint firstAttribute="width" constant="100" id="nq5-1p-3He"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="BoD-TF-pKF" firstAttribute="centerX" secondItem="lbP-t0-QNS" secondAttribute="centerX" id="7bg-BR-d8Z"/>
                             <constraint firstItem="qse-h2-dLW" firstAttribute="top" secondItem="4Tw-LI-J3s" secondAttribute="bottom" constant="8" symbolic="YES" id="BGC-NZ-Mcb"/>
                             <constraint firstItem="4Tw-LI-J3s" firstAttribute="top" secondItem="lbP-t0-QNS" secondAttribute="bottom" constant="8" symbolic="YES" id="Dd0-2c-j66"/>
                             <constraint firstItem="b8k-5d-dYG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IcE-0g-xmb"/>
@@ -73,6 +83,7 @@
                             <constraint firstItem="lbP-t0-QNS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WJZ-N6-RPr"/>
                             <constraint firstItem="4Tw-LI-J3s" firstAttribute="leading" secondItem="lbP-t0-QNS" secondAttribute="leading" id="ctS-72-zSc"/>
                             <constraint firstItem="qse-h2-dLW" firstAttribute="leading" secondItem="4Tw-LI-J3s" secondAttribute="leading" id="gQ7-V7-RuI"/>
+                            <constraint firstItem="lbP-t0-QNS" firstAttribute="top" secondItem="BoD-TF-pKF" secondAttribute="bottom" constant="8" symbolic="YES" id="jlH-dw-Mxo"/>
                             <constraint firstItem="lbP-t0-QNS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="154" id="ln7-LN-flR"/>
                             <constraint firstItem="b8k-5d-dYG" firstAttribute="top" secondItem="qse-h2-dLW" secondAttribute="bottom" constant="10" id="uHu-HU-Tb7"/>
                         </constraints>
@@ -81,6 +92,7 @@
                         <outlet property="number1" destination="lbP-t0-QNS" id="Qdd-ge-v8w"/>
                         <outlet property="number2" destination="4Tw-LI-J3s" id="UQA-02-bwn"/>
                         <outlet property="number3" destination="qse-h2-dLW" id="Wu5-W2-hgh"/>
+                        <outlet property="number4" destination="BoD-TF-pKF" id="hhR-1y-ZtQ"/>
                         <outlet property="result" destination="NFz-XN-IbW" id="AxX-oy-02c"/>
                     </connections>
                 </viewController>
