@@ -19,6 +19,7 @@
 		8DC1EF432906ACCC00E9EA48 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 8DC1EF422906ACCC00E9EA48 /* RxCocoa */; };
 		8DC1EF452906ACCC00E9EA48 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 8DC1EF442906ACCC00E9EA48 /* RxRelay */; };
 		8DC1EF472906ACCC00E9EA48 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8DC1EF462906ACCC00E9EA48 /* RxSwift */; };
+		8DC1EF49290950C500E9EA48 /* FlatMapTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC1EF48290950C500E9EA48 /* FlatMapTestVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		8DC1EF2E2906AC0300E9EA48 /* RxPracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxPracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DC1EF322906AC0300E9EA48 /* RxPracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxPracticeUITests.swift; sourceTree = "<group>"; };
 		8DC1EF342906AC0300E9EA48 /* RxPracticeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxPracticeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8DC1EF48290950C500E9EA48 /* FlatMapTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatMapTestVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				8DC1EF132906AC0100E9EA48 /* SceneDelegate.swift */,
 				8DC1EF152906AC0100E9EA48 /* ViewController.swift */,
 				8DC1EF172906AC0100E9EA48 /* Main.storyboard */,
+				8DC1EF48290950C500E9EA48 /* FlatMapTestVC.swift */,
 				8DC1EF1A2906AC0300E9EA48 /* Assets.xcassets */,
 				8DC1EF1C2906AC0300E9EA48 /* LaunchScreen.storyboard */,
 				8DC1EF1F2906AC0300E9EA48 /* Info.plist */,
@@ -272,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DC1EF49290950C500E9EA48 /* FlatMapTestVC.swift in Sources */,
 				8DC1EF162906AC0100E9EA48 /* ViewController.swift in Sources */,
 				8DC1EF122906AC0100E9EA48 /* AppDelegate.swift in Sources */,
 				8DC1EF142906AC0100E9EA48 /* SceneDelegate.swift in Sources */,
