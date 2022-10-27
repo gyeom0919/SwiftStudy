@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zRP-mz-DB8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xnG-52-j27">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
@@ -100,6 +100,59 @@
             </objects>
             <point key="canvasLocation" x="-22" y="4"/>
         </scene>
+        <!--Text Field ValiedVC-->
+        <scene sceneID="kI1-tl-Jto">
+            <objects>
+                <viewController id="xnG-52-j27" customClass="TextFieldValiedVC" customModule="RxPractice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RKs-Mj-P2N">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bVK-Bp-tgG">
+                                <rect key="frame" x="16" y="77" width="358" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="d1Y-6m-bVP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mns-K1-lxk">
+                                <rect key="frame" x="16" y="125" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7TA-GX-iAK">
+                                <rect key="frame" x="16" y="162" width="358" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button">
+                                    <color key="baseBackgroundColor" red="0.20392156859999999" green="0.77656562630000003" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ymy-K6-ICO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7TA-GX-iAK" firstAttribute="top" secondItem="bVK-Bp-tgG" secondAttribute="bottom" constant="45" id="4yv-gI-36i"/>
+                            <constraint firstItem="mns-K1-lxk" firstAttribute="top" secondItem="bVK-Bp-tgG" secondAttribute="bottom" constant="8" symbolic="YES" id="Lq9-Ny-yyB"/>
+                            <constraint firstItem="7TA-GX-iAK" firstAttribute="leading" secondItem="bVK-Bp-tgG" secondAttribute="leading" id="OFT-DM-Po1"/>
+                            <constraint firstItem="mns-K1-lxk" firstAttribute="leading" secondItem="bVK-Bp-tgG" secondAttribute="leading" id="WCY-Un-RdT"/>
+                            <constraint firstItem="ymy-K6-ICO" firstAttribute="trailing" secondItem="bVK-Bp-tgG" secondAttribute="trailing" constant="16" id="Zhc-Pm-Vkg"/>
+                            <constraint firstItem="bVK-Bp-tgG" firstAttribute="leading" secondItem="ymy-K6-ICO" secondAttribute="leading" constant="16" id="jQd-ek-2oU"/>
+                            <constraint firstItem="7TA-GX-iAK" firstAttribute="trailing" secondItem="bVK-Bp-tgG" secondAttribute="trailing" id="vud-nu-1VU"/>
+                            <constraint firstItem="bVK-Bp-tgG" firstAttribute="top" secondItem="ymy-K6-ICO" secondAttribute="top" constant="30" id="zNJ-im-MOa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="doSome" destination="7TA-GX-iAK" id="ZQV-df-o25"/>
+                        <outlet property="isTextValid" destination="mns-K1-lxk" id="Eus-l7-cCt"/>
+                        <outlet property="writeSomething" destination="bVK-Bp-tgG" id="oR7-c9-knF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="58f-N3-eRh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23" y="657"/>
+        </scene>
         <!--Flat Map TestVC-->
         <scene sceneID="Gyf-d3-mdE">
             <objects>
@@ -136,6 +189,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

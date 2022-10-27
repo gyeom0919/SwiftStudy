@@ -20,6 +20,7 @@
 		8DC1EF452906ACCC00E9EA48 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 8DC1EF442906ACCC00E9EA48 /* RxRelay */; };
 		8DC1EF472906ACCC00E9EA48 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8DC1EF462906ACCC00E9EA48 /* RxSwift */; };
 		8DC1EF49290950C500E9EA48 /* FlatMapTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC1EF48290950C500E9EA48 /* FlatMapTestVC.swift */; };
+		8DC1EF4B290FE30800E9EA48 /* TextFieldValidVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC1EF4A290FE30800E9EA48 /* TextFieldValidVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		8DC1EF322906AC0300E9EA48 /* RxPracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxPracticeUITests.swift; sourceTree = "<group>"; };
 		8DC1EF342906AC0300E9EA48 /* RxPracticeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxPracticeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8DC1EF48290950C500E9EA48 /* FlatMapTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatMapTestVC.swift; sourceTree = "<group>"; };
+		8DC1EF4A290FE30800E9EA48 /* TextFieldValidVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldValidVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				8DC1EF1A2906AC0300E9EA48 /* Assets.xcassets */,
 				8DC1EF1C2906AC0300E9EA48 /* LaunchScreen.storyboard */,
 				8DC1EF1F2906AC0300E9EA48 /* Info.plist */,
+				8DC1EF4A290FE30800E9EA48 /* TextFieldValidVC.swift */,
 			);
 			path = RxPractice;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				8DC1EF49290950C500E9EA48 /* FlatMapTestVC.swift in Sources */,
 				8DC1EF162906AC0100E9EA48 /* ViewController.swift in Sources */,
 				8DC1EF122906AC0100E9EA48 /* AppDelegate.swift in Sources */,
+				8DC1EF4B290FE30800E9EA48 /* TextFieldValidVC.swift in Sources */,
 				8DC1EF142906AC0100E9EA48 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
