@@ -11,7 +11,11 @@ import Alamofire
 
 class ViewController: UIViewController {
     
-    struct DecodableType : Decodable { let url : String}
+    struct Example: Codable {
+        let id : Int
+        let title : String
+        let description : String
+    }
     
     @IBOutlet weak var textLabel: UILabel!
     
@@ -19,17 +23,28 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        AF.request("https://phplaravel-574671-2962113.cloudwaysapps.com/api/v1/todos?page=1&order_by=desc&per_page=1", method: .get).responseDecodable(of: DecodableType.self) {
-            debugPrint("Response : \($0)")
-            
-            debugPrint("-------")
-            
-            AF.request("https://phplaravel-574671-2962113.cloudwaysapps.com/api/v1/todos?page=1&order_by=desc&per_page=1", method: .get, encoding: JSONEncoding.default).responseData { response in
-//                textLabel.text = response
-                debugPrint(response)
-            }
+        
+        let url = "https://dummyjson.com/products/1"
+        let header : HTTPHeaders = ["Content-Type": "application/json"]
+        
+        let dataRequest = AF.request(url, method: .get, encoding: JSONEncoding.default,headers: header)
+//        dataRequest.responseData{
+//            debugPrint($0)
+//            debugPrint("==================================")
+//
+//        }
+        
+        
+        dataRequest.responseDecodable(of: Example.self) {
+            debugPrint($0)
+//            debugPrint("-------ss-------")
+//            debugPrint(Example.self)
         }
+        
+        print(Example.self)
+        
     }
-    
 }
+
+
 
