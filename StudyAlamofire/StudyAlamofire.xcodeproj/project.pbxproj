@@ -17,6 +17,7 @@
 		8D286627291A5DC7004647F7 /* StudyAlamofireUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D286626291A5DC7004647F7 /* StudyAlamofireUITests.swift */; };
 		8D286629291A5DC7004647F7 /* StudyAlamofireUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D286628291A5DC7004647F7 /* StudyAlamofireUITestsLaunchTests.swift */; };
 		8D286637291A5DF0004647F7 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8D286636291A5DF0004647F7 /* Alamofire */; };
+		8D286639291B37ED004647F7 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D286638291B37ED004647F7 /* Network.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		8D286622291A5DC7004647F7 /* StudyAlamofireUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudyAlamofireUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D286626291A5DC7004647F7 /* StudyAlamofireUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyAlamofireUITests.swift; sourceTree = "<group>"; };
 		8D286628291A5DC7004647F7 /* StudyAlamofireUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyAlamofireUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8D286638291B37ED004647F7 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				8D28660E291A5DC7004647F7 /* Assets.xcassets */,
 				8D286610291A5DC7004647F7 /* LaunchScreen.storyboard */,
 				8D286613291A5DC7004647F7 /* Info.plist */,
+				8D286638291B37ED004647F7 /* Network.swift */,
 			);
 			path = StudyAlamofire;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 			files = (
 				8D28660A291A5DC6004647F7 /* ViewController.swift in Sources */,
 				8D286606291A5DC6004647F7 /* AppDelegate.swift in Sources */,
+				8D286639291B37ED004647F7 /* Network.swift in Sources */,
 				8D286608291A5DC6004647F7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
