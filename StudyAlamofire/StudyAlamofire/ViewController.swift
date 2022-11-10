@@ -68,7 +68,7 @@ class ViewController: UIViewController {
             
         })
     }
-    let url = "https://dummyjson.com/products/1"
+    let url = "https://dummyjson.com/products/12"
 
     let jsonDecoder = JSONDecoder()
 //    let data = NSData(contentsOf: NSURL(string: URL!)! as URL)
@@ -81,9 +81,6 @@ class ViewController: UIViewController {
 //                print(" \(decoded.id) & \(decoded.title)")
 //            }
             
-            do {
-                let res = try JSONDecoder().decode([Example].self, from: ?)
-            }
             self.textLabel.text = "\(response)"
             break
         case .failure(_):
