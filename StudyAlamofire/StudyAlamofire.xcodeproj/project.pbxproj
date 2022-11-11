@@ -19,6 +19,8 @@
 		8D286637291A5DF0004647F7 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8D286636291A5DF0004647F7 /* Alamofire */; };
 		8D286639291B37ED004647F7 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D286638291B37ED004647F7 /* Network.swift */; };
 		8D28663C291B88A0004647F7 /* CurrentTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D28663B291B88A0004647F7 /* CurrentTimeViewController.swift */; };
+		8D64682E2922664D00EBB8BA /* intoJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D64682D2922664D00EBB8BA /* intoJson.swift */; };
+		8D6468302922672A00EBB8BA /* TodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D64682F2922672A00EBB8BA /* TodoViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		8D286628291A5DC7004647F7 /* StudyAlamofireUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyAlamofireUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8D286638291B37ED004647F7 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		8D28663B291B88A0004647F7 /* CurrentTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentTimeViewController.swift; sourceTree = "<group>"; };
+		8D64682D2922664D00EBB8BA /* intoJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = intoJson.swift; sourceTree = "<group>"; };
+		8D64682F2922672A00EBB8BA /* TodoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +113,9 @@
 				8D286607291A5DC6004647F7 /* SceneDelegate.swift */,
 				8D286609291A5DC6004647F7 /* ViewController.swift */,
 				8D28660B291A5DC6004647F7 /* Main.storyboard */,
+				8D64682D2922664D00EBB8BA /* intoJson.swift */,
 				8D28660E291A5DC7004647F7 /* Assets.xcassets */,
+				8D64682F2922672A00EBB8BA /* TodoViewModel.swift */,
 				8D286610291A5DC7004647F7 /* LaunchScreen.storyboard */,
 				8D286613291A5DC7004647F7 /* Info.plist */,
 				8D286638291B37ED004647F7 /* Network.swift */,
@@ -273,9 +279,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D28660A291A5DC6004647F7 /* ViewController.swift in Sources */,
+				8D64682E2922664D00EBB8BA /* intoJson.swift in Sources */,
 				8D286606291A5DC6004647F7 /* AppDelegate.swift in Sources */,
 				8D28663C291B88A0004647F7 /* CurrentTimeViewController.swift in Sources */,
 				8D286639291B37ED004647F7 /* Network.swift in Sources */,
+				8D6468302922672A00EBB8BA /* TodoViewModel.swift in Sources */,
 				8D286608291A5DC6004647F7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
